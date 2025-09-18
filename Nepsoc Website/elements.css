@@ -10,7 +10,6 @@
 .button:hover {
   background-color: #e60000;
 }
-<style>
 .carousel-container {
   position: relative;
   max-width: 1000px;
@@ -21,7 +20,7 @@
 .carousel {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 20px;
 }
@@ -78,4 +77,3 @@
 .arrow:hover {
   background: rgba(0,0,0,0.8);
 }
-</style>
