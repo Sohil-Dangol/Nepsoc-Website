@@ -4,17 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="elements.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Home Page</title>
 </head>
 <body>
-    <nav>
+       <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="small-logo-container">
+            <a class="small-logo" href="#">↥Small Logo</a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Active</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container-fluid big-logo-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 big-logo-container">
+            <h1 class="big-logo">↧Big Logo</h1>
+          </div><!--/.col-xs-12 -->
+        </div><!--/.row -->
+      </div><!--/.container -->
+    </div><!--/.container-fluid -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-8">
+        </div><!--/.col-xs-12 -->
+      </div><!--/.row -->
+    </div><!--/.container -->
+
+    
+   <!-- <nav>
         <a href="index.html">Home</a>
         <a href="exec.html">Exec Team</a>
         <a href="events.html">Events</a>
         <a href="sports.html">Sports Teams</a>
         <a href="gallery.html">Gallery</a>
         <a href="shop.html">Shop</a>
-      </nav>
+      </nav>-->
 
     <h1>नमस्ते</h1>
     <h2>Welcome To Warwick Nepsoc</h2>
@@ -41,5 +88,124 @@
     <p>Beyond social events, we also organise career-focused workshops and networking sessions, helping our members gain valuable insights into different industries, develop professional skills, and explore potential career paths. Whether you’re here to make friends, celebrate Nepali culture, or prepare for your future, there’s a place for you in Warwick NepSoc.</p>
     <a href="events.html" class="button">See Upcoming Events</a>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    /* *********************************
+           Variables
+  ********************************** */
+$navbar-height: 50px;
+$big-logo-padding: 15px; // adjust these 2 values
+$small-logo-padding: 2px; // of bottom padding to look nice
 
+
+/* *********************************
+   Some Style Overrides on Bootstrap
+  ********************************** */
+.navbar-inverse {
+   background: rgba(62,195,246,0);
+  border-bottom: none;
+}
+.navbar-inverse .navbar-toggle {
+  border: 1px solid #333;
+  border-color: rgba(255,255,255,0.7);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+   border-color: transparent;
+  @media (max-width: 767px) {
+    background: rgba(255,255,255,0.75);
+  }
+}
+.navbar-inverse .navbar-nav > li > a {
+color: black;
+  
+
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+color: #22F;
+
+}
+ul.nav {
+}
+
+/* *********************************
+           Toolbar Logo
+  ********************************** */
+.small-logo-container {
+    padding-top: $navbar-height;
+    height: $navbar-height;
+    overflow: hidden;
+    position: absolute;
+  }
+
+.small-logo {
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: $small-logo-padding;
+}
+
+/* *********************************
+           Big Logo
+  ********************************** */
+.big-logo-row {
+  background: gold;
+  
+  .big-logo-container {
+    padding-top: $navbar-height;
+  }
+  
+  h1 {
+    font-size: 4em;
+    margin:0;
+    padding:0 0 $big-logo-padding 0;
+    
+    @media (min-width: 400px) { font-size: 4.5em; }
+    @media (min-width: 440px) { font-size: 5.5em; }
+    @media (min-width: 500px) { font-size: 6.5em; }
+    @media (min-width: 630px) { font-size: 7.5em;  }
+    @media (min-width: 768px) { font-size: 9em; padding-bottom: $big-logo-padding * 2; }
+    @media (min-width: 1200px) { font-size: 12em; }
+  }
+}
+</style>
+<script>
+    var navbarHeight = $('.navbar').height(); 
+
+$(window).scroll(function() {
+  var navbarColor = "62,195,246";//color attr for rgba
+  var smallLogoHeight = $('.small-logo').height();
+  var bigLogoHeight = $('.big-logo').height();
+  
+  
+  var smallLogoEndPos = 0;
+  var smallSpeed = (smallLogoHeight / bigLogoHeight);
+  
+  var ySmall = ($(window).scrollTop() * smallSpeed); 
+  
+  var smallPadding = navbarHeight - ySmall;
+  if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
+  if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
+  if (smallPadding < 0) { smallPadding = 0; }
+  
+  $('.small-logo-container ').css({ "padding-top": smallPadding});
+  
+  var navOpacity = ySmall / smallLogoHeight; 
+  if  (navOpacity > 1) { navOpacity = 1; }
+  if (navOpacity < 0 ) { navOpacity = 0; }
+  var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
+  $('.navbar').css({"background-color": navBackColor});
+  
+  var shadowOpacity = navOpacity * 0.4;
+  if ( ySmall > 1) {
+    $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+  } else {
+    $('.navbar').css({"box-shadow": "none"});
+  }
+  
+  
+  
+});
+</script>
 </html>
+
