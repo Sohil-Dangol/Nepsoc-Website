@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+<h1>Events</h1>
+<h2>Upcoming Events</h2>
+
+<iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_URL" 
+style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+
+<h2>Upcoming Events</h2>
+
+<div class="carousel-container">
+  <button class="arrow left">&#10094;</button>
+  <div class="carousel">
+    <div class="card">
+      <img src="momo-night.jpg" alt="Momo Night">
+      <h3>Momo Night</h3>
+      <p>Fri 20 Oct 2025 · SU Building</p>
+      <a href="#">Get Tickets</a>
+    </div>
+
+    <div class="card">
+      <img src="bar-crawl.jpg" alt="Bar Crawl">
+      <h3>Bar Crawl</h3>
+      <p>Sat 5 Nov 2025 · Leamington</p>
+      <a href="#">Sign Up</a>
+    </div>
+
+    <div class="card">
+      <img src="games-night.jpg" alt="Games Night">
+      <h3>Games Night</h3>
+      <p>Wed 15 Nov 2025 · Library Café</p>
+      <a href="#">Join Us</a>
+    </div>
+
+    <div class="card">
+      <img src="career-event.jpg" alt="Career Event">
+      <h3>Career Insights</h3>
+      <p>Thu 30 Nov 2025 · Oculus</p>
+      <a href="#">Register</a>
+    </div>
+  </div>
+  <button class="arrow right">&#10095;</button>
+</div>
+
+<script>
+const carousel = document.querySelector('.carousel');
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
+
+rightArrow.addEventListener('click', () => {
+  carousel.scrollBy({ left: 270, behavior: 'smooth' }); // scrolls 1 card
+});
+leftArrow.addEventListener('click', () => {
+  carousel.scrollBy({ left: -270, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
