@@ -63,28 +63,37 @@
 
 .about {
   display: flex;
+  height: 100vh;
   flex-wrap: wrap;
-  justify-content: center;
   background: #4688ff;
-  margin: 40px 0;
+  margin: 10px 0;
+  flex-direction: column;
+  gap: 40px; /* Adjust this value as needed */
 }
 
 .about-text {
   background: #4688ff;
   color: black;
   padding: 40px;
-  width: 300px;
+  width: 400px;
   text-align: left;
 }
 
 .about-text h2 {
   color: black;
   font-weight: 800;
+  font-size: 60px;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  word-spacing: 3px;
 }
 
 .about-text p {
-  font-size: 0.9rem;
+  font-size: 1.6rem;
   margin-top: 10px;
+  letter-spacing: 0.03em;  /* Relative to font size */
+  word-spacing: 2px;     /* Space between words */
+  
 }
 
 .youtube-section {
@@ -92,11 +101,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 50px; /* Reduced from 200px */
+  margin-top: 100px; /* This creates the gap you want */
+  margin-right: 90px;
 }
 
 .youtube-section img {
-  width: 300px;
+  width: 854px;
+  height: 480px;
+  /* Remove margin-top: 40px */
 }
 
 .flags img {
