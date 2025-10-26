@@ -1,151 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <style>
-    /* Navbar */
-    .navbar-inverse {
-      background: rgba(62,195,246,0);
-      border-bottom: none;
-    }
-    .navbar-inverse .navbar-toggle {
-      border: 1px solid rgba(255,255,255,0.7);
-    }
-    .navbar-inverse .navbar-nav > li > a {
-      color: black;
-    }
-    .navbar-inverse .navbar-nav > li > a:hover,
-    .navbar-inverse .navbar-nav > li > a:focus {
-      color: #22F;
-    }
-
-    /* Big Logo */
-    .big-logo-row { background: gold; }
-    .big-logo-container { padding-top: 50px; }
-    .big-logo-row h1 {
-      font-size: 4em;
-      margin: 0;
-      padding: 0 0 15px 0;
-    }
-
-    /* Small Logo */
-    .small-logo-container {
-      position: fixed; /* stay in navbar */
-      top: 0;
-      left: 0;
-      height: 50px;
-      overflow: hidden;
-      padding-top: 0; /* hidden initially */
-      transition: padding-top 0.3s ease, opacity 0.3s ease;
-      opacity: 0; /* start invisible */
-      z-index: 1000;
-    }
-    .small-logo {
-      color: white;
-      font-size: 2.5em;
-    }
-
-    /* Section Groups */
-    .section-group { margin-bottom: 50px; }
-    .section-group h2, .section-group h3 { margin-bottom: 10px; }
-    .section-group p { margin: 0; line-height: 1.6; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warwick NepSoc</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="small-logo-container">
-          <a class="small-logo" href="#">↥Small Logo</a>
-        </div>
+  <header class="navbar">
+    <img src="logo.png" alt="NepSoc Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Exec</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <img src="namaste.png" alt="Namaste" class="namaste-img">
+      <h1>Welcome To<br><span>Warwick NepSoc</span></h1>
+    </section>
+
+    <section class="about">
+      <div class="about-text">
+        <h2>Who are We?</h2>
+        <p>
+          We are the Nepalese Society where you can meet the Nepali students 
+          from all years, alumni as well as others interested in our culture.
+        </p>
       </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Active</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
+      <div class="youtube-section">
+        <a href="#" class="youtube-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+        </a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Big Logo -->
-  <div class="container-fluid big-logo-row">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 big-logo-container">
-          <h1 class="big-logo">↧Big Logo</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-md-6 col-sm-8">
-
-        <h1>नमस्ते</h1>
-        <h2>Welcome To Warwick Nepsoc</h2>
-
-        <div class="section-group">
-          <h3>Who are we?</h3>
-          <p>We are The University of Warwick's Nepalese Society where you can meet the Nepali students from all years, alumni and others interested in our culture.</p>
-        </div>
-
-        <div class="section-group">
-          <h3>What do we do?</h3>
-          <p>We regularly host a variety of fun and engaging events...</p>
-          <p>Beyond social events, we also organise career-focused workshops...</p>
-          <a href="events.html" class="button">See Upcoming Events</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <script>
-    $(window).scroll(function() {
-      var scrollTop = $(this).scrollTop();
-      var bigLogoHeight = $('.big-logo').height();
-
-      if(scrollTop > bigLogoHeight / 2){
-        // Show small logo
-        $('.small-logo-container').css({
-          'padding-top': '10px',
-          'opacity': 1
-        });
-      } else {
-        // Hide small logo
-        $('.small-logo-container').css({
-          'padding-top': '0',
-          'opacity': 0
-        });
-      }
-
-      // Optional: adjust navbar background
-      var opacity = Math.min(scrollTop / bigLogoHeight, 1);
-      $('.navbar').css('background-color', 'rgba(62,195,246,' + opacity + ')');
-    });
-  </script>
+    <footer class="flags">
+      <img src="flags.png" alt="Prayer Flags">
+    </footer>
+  </main>
 </body>
 </html>
