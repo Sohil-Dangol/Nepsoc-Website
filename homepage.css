@@ -11,17 +11,24 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
+  margin-top: -50px ;
 }
 
 .logo {
   width: 200px;
   height: 200px;
+  transform: translateY(30px) translateX(-40px);
+}
+.namaste {
+  position: absolute;
+  transform: scale(0.4) translateY(-700px);
+  opacity: 95%;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +36,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: black;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -46,20 +53,15 @@ body {
   margin: 0;  /* remove margin */
 }
 
-
-.namaste-img {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
 .hero h1 {
-  font-size: 3rem;
+  font-size: 5.5rem;
   font-weight: 800;
   line-height: 1.2;
+  transform: translateY(200px);
 }
 
 .hero span {
-  font-size: 100px;
+  font-size: 180px;
 }
 
 .about {
@@ -67,7 +69,7 @@ body {
   height: 100vh;
   flex-wrap: wrap;
   background: #4688ff;
-  margin: 10px 0;
+  margin: 0px 0;
   flex-direction: column;
   gap: 40px; /* Adjust this value as needed */
 }
@@ -110,17 +112,17 @@ body {
 .youtube-section img {
   width: 854px;
   height: 480px;
-  /* Remove margin-top: 40px */
 }
 
 .flags {
-  height: 200px; /* Increase footer height */
+  height: 400px; /* Increase footer height */
   overflow: hidden; /* Prevents content overflow */
 }
 
 .flags img {
   width: 100%;
   height: 100%; /* Fills the container */
+  opacity: 70%;
   object-fit: cover;
 }
 .carousel {
@@ -197,12 +199,12 @@ body {
 }
 
 .butterflys {
-  height: 200px; /* Increase footer height */
+  height: 250px; /* Increase footer height */
   overflow: hidden; /* Prevents content overflow */
 }
 
 .butterflys img {
-  width: 100%;
+  width:100%;
   height: 100%; /* Fills the container */
   object-fit: cover;
 }
@@ -210,19 +212,21 @@ body {
   text-align: center;
   padding: 60px 20px;
   background: #4688ff; 
+  height: 300px;
 }
 
 .join-btn {
   display: inline-block;
   background: #FFD166;
   color: #000; /* Black text for contrast */
-  padding: 18px 45px;
+  padding: 40px 90px;
   border-radius: 30px; /* Rounded corners */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 100px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
   border: 2px solid #FFD700; /* Optional border */
