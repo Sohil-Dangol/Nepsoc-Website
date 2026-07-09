@@ -1,316 +1,507 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #ff8b87;
-  color: black;
-  text-align: center;
+img {
+    max-width: 100%;
+    height: auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff8b87;
+    color: black;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  margin-top: -50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1rem;
+    height: 120px;
+    background: #ff8b87;
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
-  transform: translateY(30px) translateX(-40px);
-}
-.namaste {
-  position: absolute;
-  transform: scale(0.4) translateY(-700px);
-  opacity: 95%;
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
+    transform: translate(-20px, -10px);
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    gap: clamp(15px, 3vw, 40px);
+    transform: translate(0, 15px);
 }
 
 .navbar a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
-  font-weight: 500;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    font-weight: 600;
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  position: relative;
-  height: 100vh; /* takes full screen height */
-  background-color: #ff8b87; /* keep your pink background */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center;     /* centers horizontally */
-  text-align: center;
-  padding: 0; /* remove padding */
-  margin: 0;  /* remove margin */
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    padding:2rem 5%;
+
+    text-align:center;
+
+    /*overflow:hidden; /* stops image escaping */
 }
+
+
+.hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
 
 .hero h1 {
-  font-size: 5.5rem;
+  font-size: clamp(3rem, 4vw, 6rem);
   font-weight: 800;
-  line-height: 1.2;
-  transform: translateY(200px);
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 70px;
+  /*text-shadow: 0px 20px 50px rgba(0,0,0,0.15);*/
+}
+.hero span{
+  font-size: clamp(3rem, 7vw, 6rem);
 }
 
-.hero span {
-  font-size: 180px;
+
+.namaste {
+    position: absolute;
+
+    width: min(350px, 70vw);
+
+    left: 50%;
+    top: 35%;
+
+    transform:translate(-50%,-50%);
+
+    opacity: 0.25;
+  
+
+    pointer-events: none;
 }
+
 
 .about {
-  display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
-  background: #4688ff;
-  margin: 0px 0;
-  flex-direction: column;
-  gap: 40px; /* Adjust this value as needed */
+
+    background: #4688ff;
+
+    padding: 6rem 5%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0,1fr));
+
+    gap: 3rem;
+
+    align-items: center;
+
 }
+
 
 .about-text {
-  background: #4688ff;
-  color: black;
-  padding: 40px;
-  width: 400px;
-  text-align: left;
+
+    width: 100%;
+
+    max-width: 600px;
+
 }
+
 
 .about-text h2 {
-  color: black;
-  font-weight: 800;
-  font-size: 60px;
-  white-space: nowrap;
-  letter-spacing: 2px;
-  word-spacing: 3px;
+
+    font-size: clamp(2.5rem,5vw,4rem);
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
 }
+
 
 .about-text p {
-  font-size: 1.6rem;
-  margin-top: 10px;
-  letter-spacing: 0.03em;  /* Relative to font size */
-  word-spacing: 2px;     /* Space between words */
-  
+
+    font-size: clamp(1rem,2vw,1.5rem);
+
+    line-height:1.7;
+
 }
+
+
+.about-text ul {
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+
+.about-text li {
+
+    font-size:1.2rem;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =========================
+   YOUTUBE
+========================= */
+
 
 .youtube-section {
-  background: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px; /* Reduced from 200px */
-  margin-top: 100px; /* This creates the gap you want */
-  margin-right: 90px;
+
+    display:flex;
+
+    justify-content:center;
+
 }
+
 
 .youtube-section img {
-  width: 854px;
-  height: 480px;
+    width:100%;
+    max-width:854px;
+    height:auto;
 }
 
-.flags {
-  height: 400px; /* Increase footer height */
-  overflow: hidden; /* Prevents content overflow */
+
+
+/* =========================
+   IMAGE BANNERS
+========================= */
+
+
+.flags,
+.butterflys,
+.semicircles {
+
+    width:100%;
+
+    height:220px;
+
+    overflow:hidden;
+
 }
 
-.flags img {
-  width: 100%;
-  height: 100%; /* Fills the container */
-  opacity: 70%;
-  object-fit: cover;
+
+.flags img,
+.butterflys img,
+.semicircles img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
 }
+
+
+
+/* =========================
+   CAROUSEL
+========================= */
+
+
 .carousel {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* Wider to fit 3 images */
-  margin: 0 auto;
-  overflow: hidden;
+
+    width:100%;
+
 }
+
 
 .carousel-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  gap: 20px; /* Space between images */
-  padding: 0 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    width:100%;
 }
 
 .carousel-slide {
-  min-width: calc(33.333% - 14px); /* 3 images with gap */
-  flex: 0 0 calc(33.333% - 14px); /* Exactly 3 per view */
-  display: none; /* Hide by default */
+    min-width:0;
 }
 
-.carousel-slide.active {
-  display: block; /* Show active slides */
-}
 
 .carousel-slide img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
+
+    width:100%;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
 }
 
-/* Navigation buttons */
+
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.7);
-  color: white;
-  border: none;
-  padding: 15px 20px;
-  cursor: pointer;
-  font-size: 24px;
-  z-index: 10;
-  border-radius: 50%;
+
+    display:none;
+
 }
 
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
 
-/* Dot indicators */
 .carousel-dots {
-   position: static; /* Remove absolute positioning */
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 100px;
-  width: 100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:30px;
+
 }
+
 
 .dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
+
+    width:12px;
+
+    height:12px;
+
+    background:white;
+
+    opacity:.5;
+
+    border-radius:50%;
+
 }
+
 
 .dot.active {
-  background: white;
+
+    opacity:1;
+
 }
 
-.butterflys {
-  height: 250px; /* Increase footer height */
-  overflow: hidden; /* Prevents content overflow */
-}
 
-.butterflys img {
-  width:100%;
-  height: 100%; /* Fills the container */
-  object-fit: cover;
-}
+
+/* =========================
+   JOIN BUTTON
+========================= */
+
+
 .join-section {
-  text-align: center;
-  padding: 60px 20px;
-  background: #4688ff; 
-  height: 300px;
+
+    background:#4688ff;
+
+    padding:5rem 2rem;
+
+    display:flex;
+
+    justify-content:center;
+
 }
+
 
 .join-btn {
-  display: inline-block;
-  background: #FFD166;
-  color: #000; /* Black text for contrast */
-  padding: 40px 90px;
-  border-radius: 30px; /* Rounded corners */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 100px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-  border: 2px solid #FFD700; /* Optional border */
+
+    background:#FFD166;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+
+    padding:20px clamp(40px,8vw,90px);
+
+    border-radius:40px;
+
+    transition:.3s;
+
 }
+
 
 .join-btn:hover {
-  background: #FFC400; /* Slightly darker yellow on hover */
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+
+    transform:translateY(-5px);
+
 }
 
-.join-btn:active {
-  transform: translateY(-1px);
-}
 
-.semicircles {
-  height: 200px; /* Increase footer height */
-  overflow: hidden; /* Prevents content overflow */
-}
 
-.semicircles img {
-  width: 100%;
-  height: 100%; /* Fills the container */
-  object-fit: cover;
-}
+/* =========================
+   FOOTER
+========================= */
+
 
 .main-footer {
-  background: #1a1a1a; /* Dark background */
-  color: white;
-  padding: 40px 20px 20px;
+
+    background:#1a1a1a;
+
+    color:white;
+
+    padding:50px 5%;
+
 }
+
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
 }
+
 
 .footer-section {
-  text-align: center;
+
+    text-align:center;
+
 }
 
-.footer-section h3 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
 
 .footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+    list-style:none;
+
 }
 
-.footer-links li {
-  margin-bottom: 12px;
-}
 
 .footer-links a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
+
+    color:#ccc;
+
+    text-decoration:none;
+
 }
 
-.footer-links a:hover {
-  color: #4688ff; /* Your blue color */
-}
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  color: #999;
-  font-size: 0.9rem;
+
+    margin-top:40px;
+
+    text-align:center;
+
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
+
+
+/* =========================
+   TABLETS
+========================= */
+
+
+@media(max-width:900px){
+
+
+    .navbar {
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .navbar ul {
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+    .about {
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .about-text {
+
+        margin:auto;
+
+    }
+
+
+    .carousel-container {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .footer-content {
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:500px){
+
+
+    .hero {
+
+        min-height:70vh;
+
+    }
+
+
+    .navbar ul {
+
+        gap:12px;
+
+    }
+
+
+    .flags,
+    .butterflys,
+    .semicircles {
+
+        height:120px;
+
+    }
+
 }
