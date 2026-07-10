@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="homepage.css" >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
@@ -18,7 +18,7 @@
         <li><a href="#">Shop</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Sports</a></li>
-        <li><a href="#">Exec</a></li>
+        <li><a href="exec.html">Exec</a></li>
         <li><a href="#">Events</a></li>
       </ul>
     </nav>
@@ -35,23 +35,67 @@
             Welcome To<br>
             <span>Warwick NepSoc</span>
         </h1>
+        <p><i>"Timro dosro ghar"</i></p>
+        <div class="member">
+        <a href="#" class="join-btn">Become a member</a>
+        </div>
     </div>
 
 </section>
 
     <section class="about">
+
       <div class="about-text">
-        <h2>Who are We?</h2>
-        <p>
-          We are the Nepalese Society where you can meet the Nepali students 
-          from all years, alumni as well as others interested in our culture.
-        </p>
+
+          <h2>Who We Are</h2>
+
+          <p>
+              We are the Warwick Nepalese Society — a welcoming community where Nepali students from all years, alumni, and anyone interested in Nepali culture can come together.
+
+              <br><br>Whether you're looking to celebrate traditions, meet new people, or experience Nepali culture, NepSoc provides a place to build friendships and create unforgettable memories throughout your time at Warwick.
+          </p>
+
       </div>
-      <div class="youtube-section">
-        <a href="#" class="youtube-link">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
-        </a>
+
+
+      <div class="about-image">
+
+          <img src="stall.jpg" alt="Warwick NepSoc">
+
       </div>
+
+
+      <div class="feature-cards">
+
+          <div class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <h3>Community</h3>
+              <p>
+                  Meet Nepali students and friends, and build a supportive 
+                  community at Warwick.
+              </p>
+          </div>
+
+
+          <div class="feature-card">
+              <div class="feature-icon">🇳🇵</div>
+              <h3>Culture</h3>
+              <p>
+                  Celebrate Nepali traditions, festivals, food and culture.
+              </p>
+          </div>
+
+
+          <div class="feature-card">
+              <div class="feature-icon">🌱</div>
+              <h3>Belonging</h3>
+              <p>
+                  Find your home away from home and create lasting memories.
+              </p>
+          </div>
+
+      </div>
+
     </section>
 
     <section class = "flags">
@@ -112,11 +156,14 @@
         <a href="#" class="join-btn">Join Us</a>
       </div>
       
-      <!-- Instagram Section -->
       <div class="instagram-section">
-        <div class="instagram-embed">
-          <!-- Your Instagram embed code here -->
-        </div>
+        <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/uow_nepsoc"
+            data-instgrm-version="14">
+        </blockquote>
+
+        <script async src="//www.instagram.com/embed.js"></script>
       </div>
     </section>
     
@@ -126,35 +173,48 @@
     
     
     <footer class="main-footer">
+
       <div class="footer-content">
-        <div class="footer-section">
-        <img src="logo.png" alt="NepSoc Logo" class="logo">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Exec</a></li>
-            <li><a href="#">Sports</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Contact Us</h3>
-          <ul class="footer-links">
-            <li>
-              <a href="mailto:uownepsoc@warwick.ac.uk">uownepsoc@warwick.ac.uk</a>
-            </li>
-          </ul>
-          <div class="social-icons">
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+
+          <!-- Brand -->
+          <div class="footer-section brand">
+              <img src="logo.png" alt="Warwick NepSoc Logo" class="footer-logo">
+              <h3>Warwick Nepalese Society</h3>
+              <p>Celebrating Nepali culture at the University of Warwick.</p>
           </div>
-        </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+              <h3>Quick Links</h3>
+
+              <ul class="footer-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Exec</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section">
+              <h3>Contact Us</h3>
+
+              <a href="mailto:uownepsoc@warwick.ac.uk" class="footer-email">
+                  uownepsoc@warwick.ac.uk
+              </a>
+
+              <div class="social-icons">
+                  <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                  <a href="#"><img src="facebook.png" alt="Facebook"></a>
+              </div>
+          </div>
+
       </div>
-      
+
       <div class="footer-bottom">
-        <p>&copy; 2025 Warwick Nepal Society. All rights reserved.</p>
+          <p>&copy; 2025 Warwick Nepal Society. All rights reserved.</p>
       </div>
+
     </footer>
   </main>
 </body>
