@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ff8b87;
+}
+.hero{
+
+    width:92%;
+    margin:auto;
+    text-align:center;
+
+}
+.hero h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* Pinterest gallery */
+.gallery {
+    width: 95%;
+    max-width: 1600px;
+    margin: 50px auto;
+
+    columns: 4 220px;
+    column-gap: 40px;
+}
+
+/* Placeholder cards */
+.item {
+    width: 100%;
+    background: #d9d9d9;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    break-inside: avoid;
+}
+
+/* Different placeholder heights */
+.small {
+    height: 180px;
+}
+
+.medium {
+    height: 260px;
+}
+
+.tall {
+    height: 380px;
+}
+
+.extra-tall {
+    height: 500px;
+}
+
+/* Images (replace placeholders later) */
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .gallery {
+        columns: 3 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        columns: 2 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        columns: 1;
+    }
+}

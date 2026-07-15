@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:#ff8b87;
+    color:#111;
+
+}
+.hero{
+
+    width:92%;
+    margin:auto;
+    text-align:center;
+
+}
+
+.subtitle{
+
+    color:#c8102e;
+    letter-spacing:5px;
+    font-weight:700;
+    margin-top:20px;
+    margin-bottom:10px;
+
+}
+
+.hero h1{
+
+    font-family:'Anton',sans-serif;
+    font-size:9rem;
+    line-height:.9;
+    color:#11184c;
+    margin-bottom:25px;
+
+}
+
+
+/* GRID */
+
+.sports-grid{
+
+    width:100%;
+    max-width:1450px;
+    margin:auto;
+
+    height:720px;
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+
+    overflow:hidden;
+    border-radius:24px;
+
+}
+
+/* BOXES */
+
+.sport{
+
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+
+}
+
+.sport img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:.5s;
+
+}
+
+.sport:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(7,20,68,.60);
+
+}
+
+.label{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:white;
+    z-index:5;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.label h2{
+
+    margin-top:15px;
+    font-size:2rem;
+    letter-spacing:3px;
+
+}
+
+.icon{
+
+    width:70px;
+    height:70px;
+
+    border:2px solid white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+}
+
+/* BIG TEXT */
+
+.hero-text{
+
+    position:absolute;
+
+    left:50%;
+    top:53%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:8;
+
+    text-align:center;
+
+}
+
+.hero-text h3{
+
+    font-family:'Anton',sans-serif;
+
+    color:white;
+
+    font-size:8rem;
+
+    line-height:.9;
+
+    text-shadow:
+    4px 4px 0 #c8102e,
+    -2px -2px 0 #fff;
+
+}
+
+/* PLAYER */
+
+.player{
+
+    position:absolute;
+
+    bottom:-10px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    height:620px;
+
+    z-index:10;
+
+    object-fit:contain;
+    pointer-events:none;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:5rem;
+
+}
+
+.sports-grid{
+
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(4,280px);
+
+    height:auto;
+
+}
+
+.hero-text{
+
+    display:none;
+
+}
+
+.player{
+
+    display:none;
+
+}
+
+nav ul{
+
+    gap:20px;
+
+}
+
+}
