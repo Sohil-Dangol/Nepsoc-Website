@@ -6,6 +6,7 @@ img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -92,11 +93,7 @@ body {
     );
 }
 .about {
-    background: linear-gradient(
-        135deg,
-        #4688ff,
-        #8bb5ff
-    );
+    background: #021942;
 
     padding: 3rem 5%;
 
@@ -125,6 +122,7 @@ body {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
+    color: white;
 }
 
 

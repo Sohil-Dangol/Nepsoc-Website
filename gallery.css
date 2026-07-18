@@ -2,83 +2,160 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #ff8b87;
 }
 .hero{
-
-    width:92%;
-    margin:auto;
-    text-align:center;
-
-}
-.hero h1 {
     text-align: center;
-    font-size: 6rem;
-    margin-top: 0;
-    margin-bottom: 10px;
 }
-/* Pinterest gallery */
+.hero h1{
+    font-size:8rem;
+    margin-bottom:15px;
+}
+.hero p{
+    font-size: 1.2rem;
+}
+
+
+/* Gallery */
 .gallery {
+
     width: 95%;
     max-width: 1600px;
-    margin: 50px auto;
+
+    margin: 100px auto;
 
     columns: 4 220px;
     column-gap: 40px;
 }
 
-/* Placeholder cards */
+
+/* Gallery Cards */
 .item {
+
     width: 100%;
+
     background: #d9d9d9;
+
     border-radius: 12px;
+
     margin-bottom: 18px;
+
     break-inside: avoid;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
 }
 
-/* Different placeholder heights */
+
+/* Card Sizes */
 .small {
     height: 180px;
 }
+
 
 .medium {
     height: 260px;
 }
 
+
 .tall {
     height: 380px;
 }
+
 
 .extra-tall {
     height: 500px;
 }
 
-/* Images (replace placeholders later) */
+
+
+/* Images */
 .item img {
+
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    object-fit: cover;
+
     display: block;
+
     border-radius: 12px;
+
+    transition: transform 0.4s ease;
 }
+
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+/* Hover */
+.item:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+.item:hover .overlay {
+
+    opacity: 1;
+
+}
+
+
+.item:hover .overlay h3,
+.item:hover .overlay p {
+
+    transform: translateY(0);
+
+}
+
+
 
 /* Responsive */
-@media (max-width: 900px) {
-    .gallery {
-        columns: 3 200px;
+
+@media(max-width:900px){
+
+    .gallery{
+        columns:3 200px;
     }
+
 }
 
-@media (max-width: 600px) {
-    .gallery {
-        columns: 2 180px;
+
+@media(max-width:600px){
+
+    .gallery{
+        columns:2 180px;
+        column-gap:20px;
     }
+
 }
 
-@media (max-width: 400px) {
-    .gallery {
-        columns: 1;
+
+@media(max-width:400px){
+
+    .gallery{
+        columns:1;
     }
+
 }
