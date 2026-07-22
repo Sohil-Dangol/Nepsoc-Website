@@ -49,10 +49,10 @@ body{
 .sports-grid{
 
     width:100%;
-    max-width:1450px;
+    max-width:80vw;
     margin:auto;
 
-    height:720px;
+    height:80vh;
 
     position:relative;
 
@@ -63,6 +63,8 @@ body{
 
     overflow:hidden;
     border-radius:24px;
+
+    margin-bottom:2rem;
 
 }
 
@@ -356,5 +358,440 @@ nav ul{
     color: black;
 
     cursor: pointer;
+
+}
+
+/* ===========================
+   FOOTBALL HERO
+=========================== */
+
+.football-hero{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-bg{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.55) 35%,
+        rgba(0,0,0,.20) 65%,
+        rgba(0,0,0,.45) 100%
+    );
+}
+
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-start;
+
+    padding:140px 90px 0;
+
+    z-index:5;
+}
+
+/* LEFT */
+
+.hero-left{
+
+    margin-top: 200px;
+    max-width:840px;
+    color:white;
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#1f4ed8;
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.hero-left h1{
+
+    font-size:12rem;
+
+    line-height:.9;
+
+    margin-bottom:18px;
+}
+
+.hero-left p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    font-size:3rem;
+
+    margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    flex-shrink: 0;
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding: 30px 90px;
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+    font-size: 40px;
+    transition:.3s;
+}
+.btn-primary{
+
+    background:#1f4ed8;
+    color:white;
+}
+
+.btn-primary:hover{
+
+    background:#2e63ff;
+}
+
+.btn-secondary{
+
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+
+    background:white;
+    color:black;
+}
+
+/* ===========================
+   LEAGUE CARD
+=========================== */
+
+.league-card{
+
+    width:340px;
+    height:700px;
+
+    padding:40px;
+
+    background:rgba(18,18,18,.82);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:22px;
+
+    color:white;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    
+    position:absolute;
+
+    right:90px;
+
+    top:140px;
+}
+
+.league-card h4{
+
+    color:#9ca3af;
+
+    text-transform:uppercase;
+
+    font-size:1.2rem;
+
+    margin-bottom:15px;
+}
+
+.league-card h2{
+
+    font-size:8rem;
+
+    margin-bottom:30px;
+}
+
+.record {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.record li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.record div{
+
+    text-align:center;
+}
+
+.record span{
+
+    display:block;
+
+    font-size:2rem;
+
+    font-weight:700;
+    font-size:80px;
+}
+.record small{
+    font-size: 20px;
+}
+
+/* ===========================
+   FLOATING BOTTOM PANEL
+=========================== */
+
+.bottom-panel{
+
+    position:absolute;
+
+    left:50%;
+    bottom:60px;
+
+    transform:translateX(-50%);
+
+    width:70vw;
+
+    display:flex;
+
+    gap:30px;
+
+    z-index:10;
+}
+
+/* UPCOMING MATCH */
+
+.match-card{
+
+
+    background:rgba(18,18,18,.82);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:20px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+    padding:40px;
+
+    flex:1;
+}
+.match-card h3{
+    font-size: 2.2rem;
+    color:#2e63ff;
+}
+.match-teams {
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+
+    margin:25px 0px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.team {
+
+    display:flex;
+    align-items:center;  /* puts logo beside name */
+    gap:15px;
+
+}
+
+
+.team-logo {
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#333;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-weight:700;
+}
+
+
+.team p {
+
+    margin:0;
+
+    color:white;
+
+    font-size:3rem;
+    font-weight:600;
+
+}
+.match-info{
+    display:flex;
+    justify-content:center;
+    gap:20vh;   /* controls spacing between items */
+    margin-top: 60px;
+    font-size:1.8rem;
+}
+
+.vs {
+
+    color:#2d72ff;
+    font-weight:700;
+    font-size:1.4rem;
+
+}
+
+/* TEAMS */
+
+.teams-card{
+
+    flex:1;
+
+    background:rgba(18,18,18,.82);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.teams-card h3{
+
+    margin-bottom:20px;
+    font-size: 2.2rem;
+    color:#2d72ff;
+}
+
+/* TEAM BUTTONS */
+
+.team-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+}
+
+.team-buttons a {
+
+    text-decoration:none;
+
+    color:white;
+
+    text-align:center;
+
+    height:20vh;
+
+    font-size:4rem;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.3s;
+
+    display:flex;
+    align-items:flex-end;      /* moves text to bottom vertically */
+    justify-content:center;   /* keeps text centered horizontally */
+
+    padding-bottom:20px;      /* distance from bottom edge */
+}
+
+.team-buttons a:hover{
+
+    background:#1f4ed8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .hero-content{
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+
+    .league-card{
+
+        display:none;
+    }
+
+    .bottom-panel{
+
+        flex-direction:column;
+
+        position:static;
+
+        transform:none;
+
+        width:90%;
+
+        margin:40px auto;
+    }
+
+    .hero-left h1{
+
+        font-size:7rem;
+    }
 
 }

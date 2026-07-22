@@ -93,7 +93,12 @@ body {
     );
 }
 .about {
-    background: #021942;
+    background:
+        linear-gradient(
+        180deg,
+        #08265a,
+        #062150 120px
+    );
 
     padding: 3rem 5%;
 
@@ -318,148 +323,386 @@ body {
 
 
 
-/* =========================
-   ABOUT SECTION
-========================= */
+/* =====================================
+   WHAT WE DO
+===================================== */
 
-.What-We-Do {
-    background: linear-gradient(
-        135deg,
-        #528fff,
-        #7aa8ff
-    );
-    border-radius: 12px;
-    padding: 2rem clamp(1.5rem, 4vw, 3rem);
-    color: #000;
+.what-we-do {
+    background: linear-gradient(180deg, #08265a, #062150 120px);
+    padding: 7rem 5%;
+    overflow: hidden;
 }
 
-.What-We-Do-header {
-    display: flex;
-    align-items: flex-start;
+.what-we-do-container {
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 360px 1fr;
     gap: 5rem;
-    margin-top: 3rem;
-    /*margin-bottom: 2rem;*/
+    align-items: start;
 }
 
-.What-We-Do-header h2 {
-    flex: 0 0 260px;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(4rem, 7vw, 5rem);
-    font-weight: 800;
-    line-height: 1;
-}
+/* =====================================
+   LEFT COLUMN
+===================================== */
 
-.What-We-Do-text {
-    flex: 1;
-}
-
-.What-We-Do-text p {
-    font-size: clamp(1rem,2vw,1.5rem);
+.what-left h2 {
     font-family: "Montserrat", sans-serif;
-    line-height:1.7;
+    font-size: clamp(4rem, 7vw, 5.5rem);
+    font-weight: 800;
+    color: white;
+    line-height: .95;
+    margin-bottom: 2rem;
 }
 
-.What-We-Do-text ul {
+.yellow-line {
+    width: 90px;
+    height: 6px;
+    border-radius: 50px;
+    background: #FFD166;
+    margin-bottom: 3rem;
+}
+
+.stats {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
-.What-We-Do-text li:not(:last-child)::after {
-    content: "•";
-    margin: 0 0.75rem;
-    opacity: .5;
+.stat {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 18px;
+
+    padding: 1.2rem;
 }
 
-.carousel {
+.stat-icon {
+    width: 55px;
+    height: 55px;
+
+    background: #FFD166;
+
+    color: #08265a;
+
+    border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+
+    font-size: 1.5rem;
+
+    flex-shrink: 0;
+}
+
+.stat h3 {
+    color: white;
+    margin-bottom: .4rem;
+    font-size: 1.1rem;
+}
+
+.stat p {
+    color: rgba(255,255,255,.75);
+    line-height: 1.5;
+    font-size: .95rem;
+}
+
+/* =====================================
+   RIGHT COLUMN
+===================================== */
+
+.what-right h3 {
+
+    color: white;
+
+    font-size: clamp(2rem,3vw,3rem);
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    max-width: 850px;
+
+    margin-bottom: 1.5rem;
+}
+
+.what-right h3 span {
+    color: #FFD166;
+}
+
+.what-right > p {
+
+    color: rgba(255,255,255,.8);
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    max-width: 800px;
+
+    margin-bottom: 4rem;
+}
+
+/* =====================================
+   CAROUSEL
+===================================== */
+
+.carousel {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1.5rem;
 }
 
 .carousel-window {
-    width: 960px;
-    overflow:hidden;
+
+    width: 1020px;
+
+    overflow: hidden;
 }
 
 .carousel-track {
+
     display: flex;
-    transition: transform 0.5s ease;
+
+    transition: transform .5s ease;
 }
 
+/* =====================================
+   EVENT CARDS
+===================================== */
+
 .event-card {
-    width: 300px;
-    height: 350px;
+
+    width: 320px;
+
+    min-height: 430px;
+
+    margin: 10px;
 
     flex-shrink: 0;
 
     background: white;
-    border-radius: 20px;
+
+    border-radius: 22px;
 
     overflow: hidden;
 
-    margin: 10px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: .3s;
 }
 
+.event-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 28px 55px rgba(0,0,0,.25);
+}
 
 .event-card img {
 
     width: 100%;
-    height: 150px;
+
+    height: 190px;
 
     object-fit: cover;
-
 }
-
 
 .event-info {
 
-    padding: 15px;
-
+    padding: 1.4rem;
 }
 
+.event-info h4 {
 
-.event-info h3 {
+    font-size: 1.35rem;
 
-    margin-top: 0;
+    margin-bottom: 1rem;
 
+    color: #08265a;
 }
 
+.event-meta {
 
-.event-info p {
-
-    margin: 5px 0;
-    font-size: 14px;
-
+    margin-bottom: 1rem;
 }
 
+.event-meta p {
 
-button {
-    background: #333;
+    margin-bottom: .45rem;
+
+    color: #555;
+
+    font-size: .95rem;
+}
+
+.description {
+
+    color: #444;
+
+    line-height: 1.6;
+}
+
+/* =====================================
+   ARROWS
+===================================== */
+
+.carousel button {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(12px);
+
     color: white;
-    border: none;
-    font-size: 30px;
-    padding: 10px 15px;
+
+    font-size: 2rem;
+
+    transition: .25s;
+
     cursor: pointer;
 }
 
+.carousel button:hover {
 
+    background: rgba(255,255,255,.18);
+
+    transform: scale(1.08);
+}
+
+/* =====================================
+   CTA
+===================================== */
+
+.events-button {
+
+    margin-top: 3.5rem;
+
+    text-align: center;
+}
+
+.events-button a {
+
+    display: inline-block;
+
+    padding: 1rem 2.8rem;
+
+    background: #FFD166;
+
+    color: #08265a;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 999px;
+
+    transition: .3s;
+}
+
+.events-button a:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.events-note {
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    color: rgba(255,255,255,.7);
+
+    font-size: .95rem;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:1200px){
+
+    .what-we-do-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .what-left{
+
+        max-width:700px;
+    }
+
+    .carousel-window{
+
+        width:700px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .carousel-window{
+
+        width:340px;
+    }
+
+    .what-right h3{
+
+        font-size:2rem;
+    }
+
+    .what-left h2{
+
+        font-size:3.5rem;
+    }
+
+    .carousel{
+
+        gap:.5rem;
+    }
+
+    .carousel button{
+
+        width:48px;
+        height:48px;
+        font-size:1.5rem;
+    }
+
+}
 /* =========================
    SOCIAL BILLBOARD SECTION
 ========================= */
 
 .social-section {
-    background: linear-gradient(
-        135deg,
-        #7aa8ff,
-        #4688ff
+    background:
+        linear-gradient(
+        180deg,
+        #08265a,
+        #062150 120px
     );
     padding: 5rem 5%;
 }
@@ -474,13 +717,13 @@ button {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     margin-bottom: 8px;
-    color: black;
+    color: white;
 }
 
 .social-subheading {
     text-align: center;
     font-size: 1.1rem;
-    color: rgba(0,0,0,0.65);
+    color: white;
     margin-bottom: 40px;
     font-family: "Montserrat", sans-serif;
 }
