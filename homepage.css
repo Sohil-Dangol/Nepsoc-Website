@@ -1,3 +1,20 @@
+/* ===========================
+   SCROLL REVEAL
+=========================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -78,20 +95,6 @@ body {
     pointer-events: none;
 }
 
-.about::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-
-    background: linear-gradient(
-        180deg,
-        #F7A8A0,
-        #4688ff
-    );
-}
 .about {
     background:
         linear-gradient(
