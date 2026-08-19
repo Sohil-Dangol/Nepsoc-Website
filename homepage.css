@@ -653,6 +653,211 @@ body {
     font-size: .95rem;
 }
 
+/* ===========================
+   LOVE / HEART SECTION
+=========================== */
+
+.love-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 25px 0 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* ===========================
+   CLOUD
+=========================== */
+
+.love-content {
+    position: relative;
+    
+    width: 15vw;
+    min-height: 150px;
+
+    padding: 35px 30px;
+
+    background: #FFD166;
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    transform: rotate(2deg);
+
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+/* Cloud bubbles */
+
+.love-content::before,
+.love-content::after {
+    content: "";
+
+    position: absolute;
+
+    background: #FFD166;
+
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+
+/* Left cloud bubble */
+
+.love-content::before {
+    width: 65px;
+    height: 65px;
+
+    left: 15px;
+    top: -20px;
+}
+
+
+/* Right cloud bubble */
+
+.love-content::after {
+    width: 50px;
+    height: 50px;
+
+    right: 20px;
+    top: -12px;
+}
+
+
+/* ===========================
+   TEXT
+=========================== */
+
+.love-content h2 {
+    margin: 0 0 5px;
+
+    font-size: 1.1rem;
+    line-height: 1.2;
+
+    color: #222;
+}
+
+.love-content > p {
+    margin: 0 0 15px;
+
+    font-size: 0.9rem;
+    line-height: 1.3;
+
+    color: #333;
+}
+
+
+/* ===========================
+   HEART BUTTON
+=========================== */
+
+.heart-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #ff8b87;
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.heart-button:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.heart-button:active {
+    transform: scale(0.95);
+}
+
+
+/* Heart */
+
+.heart {
+    display: inline-block;
+
+    font-size: 1.5rem;
+
+    line-height: 1;
+}
+
+
+/* ===========================
+   HEART CLICK ANIMATION
+=========================== */
+
+.heart-button.liked .heart {
+    animation: heartPop 0.4s ease;
+}
+
+@keyframes heartPop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.5);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ===========================
+   COUNTER MESSAGE
+=========================== */
+
+.love-message {
+    margin: 10px 0 0 !important;
+
+    font-size: 0.7rem !important;
+
+    color: #333;
+
+    opacity: 0.75;
+}
+
+
 /* =====================================
    RESPONSIVE
 ===================================== */

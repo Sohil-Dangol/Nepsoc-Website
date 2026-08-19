@@ -328,9 +328,9 @@
 
 </section>
     
-    <section class = "butterflys reveal">
-        <img src = "butterflys.png" alt = "butterflys">
-    </section>
+<section class = "butterflys reveal">
+    <img src = "butterflys.png" alt = "butterflys">
+</section>
     
     <section class="social-section reveal">
       <div class="social-inner">
@@ -405,7 +405,22 @@
           </div>
  
         </div>
- 
+        
+        <section class="love-section">
+            <div class="love-content">
+                <h2>Enjoying the NepSoc website?</h2>
+
+                <p>Show us some love ❤️</p>
+
+                <button class="heart-button" id="heart-button" aria-label="Show NepSoc some love">
+                    <span class="heart">♥</span>
+                    <span class="heart-count" id="heart-count">Loading...</span>
+                </button>
+
+                <p class="love-message">people have shown their love!</p>
+            </div>
+        </section>
+
         <!-- Join Us Button -->
         <div class="join-wrap reveal">
           <a href="https://www.warwicksu.com/societies-sports/societies/uow_nepsoc/" class="join-btn">Join Us</a>
@@ -452,6 +467,8 @@
     
 
     <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="heart.js"></script>
     <script src="loadComponents.js"></script>
     <script src="scrollReveal.js"></script>
     
