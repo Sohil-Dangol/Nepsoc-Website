@@ -1,28 +1,33 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 1rem;
+    align-items: center;
+
+    padding: 0 2rem 0 0.5rem;
     height: 120px;
+
     background: #ff8b87;
+    box-sizing: border-box;
 }
 
 .logo {
     width: clamp(80px, 10vw, 140px);
     height: auto;
-    transform: translate(-20px, -10px);
 }
 
 .navbar ul {
     display: flex;
     list-style: none;
     gap: clamp(15px, 3vw, 40px);
-    transform: translate(0, 15px);
+
+    margin: 0;
+    padding: 0;
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
-    font-size: clamp(2.5rem, 2.5vw, 1.3rem);
-    font-weight: 600;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 2px;
 }

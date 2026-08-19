@@ -1,9 +1,26 @@
+/* ===========================
+   SCROLL REVEAL
+=========================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #ff8b87;

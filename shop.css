@@ -1,0 +1,187 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ff8b87;
+    color: #111;
+}
+/* ===========================
+   SHOP PAGE
+=========================== */
+
+.shop-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding-top: 100px;
+}
+
+
+/* ===========================
+   SHOP CONTENT
+=========================== */
+
+.shop-content {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+
+.shop-label {
+    margin: 0 0 20px;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    letter-spacing: 5px;
+}
+
+
+.coming-soon {
+    margin: 0;
+
+    font-size: clamp(4rem, 11vw, 11rem);
+
+    font-weight: 900;
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+}
+
+
+.shop-description {
+    margin: 35px 0 0;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* ===========================
+   REEL
+=========================== */
+
+.shop-reel {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 24px 0;
+
+    background: #222;
+    color: white;
+}
+
+
+/* ===========================
+   TRACK
+=========================== */
+
+.reel-track {
+    display: flex;
+
+    width: max-content;
+
+    animation: reel 18s linear infinite;
+}
+
+
+/* ===========================
+   REEL SET
+=========================== */
+
+.reel-set {
+
+    /* IMPORTANT */
+    width: 100vw;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    white-space: nowrap;
+}
+
+
+/* ===========================
+   TEXT
+=========================== */
+
+.reel-set span {
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* ===========================
+   INFINITE LOOP
+=========================== */
+
+@keyframes reel {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 600px) {
+
+    .shop-page {
+        padding-top: 80px;
+    }
+
+
+    .shop-content {
+        margin-bottom: 60px;
+    }
+
+
+    .shop-label {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+
+
+    .coming-soon {
+        font-size: clamp(3.5rem, 16vw, 6rem);
+
+        letter-spacing: -3px;
+    }
+
+
+    .shop-description {
+        font-size: 1rem;
+
+        padding: 0 25px;
+    }
+
+
+    .reel-set span {
+        font-size: 0.9rem;
+    }
+
+}

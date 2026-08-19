@@ -15,6 +15,8 @@
     transform: translateY(0);
 }
 
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -30,6 +32,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #ff8b87;
     color: black;
+    margin: 0;
    
 }
 
@@ -259,12 +262,19 @@ body {
     justify-content: center;
 
     border-radius: 50%;
-
     font-size: 2.3rem;
 
     margin-bottom: 20px;
 }
 
+.feature-icon img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    margin: 0;
+    transform: scale(0.08);
+}
 
 .feature-card h3 {
     font-size: 1.5rem;
@@ -926,23 +936,6 @@ body {
 @media(max-width:900px){
 
 
-    .navbar {
-
-        flex-direction:column;
-
-        gap:20px;
-
-    }
-
-
-    .navbar ul {
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
 
     .about {
 
@@ -991,12 +984,6 @@ body {
 
     }
 
-
-    .navbar ul {
-
-        gap:12px;
-
-    }
 
 
     .flags2,

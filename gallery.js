@@ -94,25 +94,185 @@ const photos = [
         title: "End of Year Ball",
         description: "Celebrating an unforgettable year together.",
         size: "medium"
+    },
+    {
+        image: "images/event17.jpg",
+        title: "NepSoc Social",
+        description: "A fun evening with NepSoc members.",
+        size: "medium"
+    },
+    {
+        image: "images/event18.jpg",
+        title: "Nepali Food Night",
+        description: "Enjoying traditional Nepali food together.",
+        size: "tall"
+    },
+    {
+        image: "images/event19.jpg",
+        title: "Sports Day",
+        description: "A day of friendly competition.",
+        size: "small"
+    },
+    {
+        image: "images/event20.jpg",
+        title: "Karaoke Night",
+        description: "Singing, laughing and making memories.",
+        size: "medium"
+    },
+    {
+        image: "images/event21.jpg",
+        title: "Nepali Culture Night",
+        description: "Celebrating Nepali culture and traditions.",
+        size: "tall"
+    },
+    {
+        image: "images/event22.jpg",
+        title: "Day Trip",
+        description: "Exploring somewhere new together.",
+        size: "medium"
+    },
+    {
+        image: "images/event23.jpg",
+        title: "Study Social",
+        description: "Taking a break from studying with friends.",
+        size: "small"
+    },
+    {
+        image: "images/event24.jpg",
+        title: "Christmas Social",
+        description: "Celebrating together before the holidays.",
+        size: "tall"
+    },
+    {
+        image: "images/event25.jpg",
+        title: "Winter Social",
+        description: "A relaxed evening with society members.",
+        size: "medium"
+    },
+    {
+        image: "images/event26.jpg",
+        title: "NepSoc Dinner",
+        description: "Good food and good company.",
+        size: "small"
+    },
+    {
+        image: "images/event27.jpg",
+        title: "Charity Event",
+        description: "Coming together to support a good cause.",
+        size: "tall"
+    },
+    {
+        image: "images/event28.jpg",
+        title: "Football Social",
+        description: "A competitive day on the pitch.",
+        size: "medium"
+    },
+    {
+        image: "images/event29.jpg",
+        title: "Bowling Night",
+        description: "An evening of bowling and friendly competition.",
+        size: "small"
+    },
+    {
+        image: "images/event30.jpg",
+        title: "Spring Social",
+        description: "Enjoying the warmer weather together.",
+        size: "medium"
+    },
+    {
+        image: "images/event31.jpg",
+        title: "Nepali New Year",
+        description: "Celebrating Nepali New Year together.",
+        size: "tall"
+    },
+    {
+        image: "images/event32.jpg",
+        title: "End of Term Social",
+        description: "Finishing the term with the society.",
+        size: "medium"
+    },
+    {
+        image: "images/event33.jpg",
+        title: "Committee Meeting",
+        description: "Planning another successful year for NepSoc.",
+        size: "small"
+    },
+    {
+        image: "images/event34.jpg",
+        title: "Picnic",
+        description: "A relaxing afternoon outdoors.",
+        size: "tall"
+    },
+    {
+        image: "images/event35.jpg",
+        title: "Games Tournament",
+        description: "Members competing in a range of games.",
+        size: "medium"
+    },
+    {
+        image: "images/event36.jpg",
+        title: "Farewell Social",
+        description: "Saying goodbye to another great year.",
+        size: "tall"
     }
 ];
 
 const gallery = document.getElementById("gallery");
+const seeMoreButton = document.getElementById("see-more");
 
-photos.forEach(photo => {
+const photosPerLoad = 20;
+let currentIndex = 0;
 
-    const item = document.createElement("div");
-    item.className = `item ${photo.size}`;
 
-    item.innerHTML = `
-        <img src="${photo.image}" alt="${photo.title}">
+function loadPhotos() {
 
-        <div class="overlay">
-            <h3>${photo.title}</h3>
-            <p>${photo.description}</p>
-        </div>
-    `;
+    const nextIndex = Math.min(
+        currentIndex + photosPerLoad,
+        photos.length
+    );
 
-    gallery.appendChild(item);
 
-});
+    for (let i = currentIndex; i < nextIndex; i++) {
+
+        const photo = photos[i];
+
+        const item = document.createElement("div");
+
+        item.className = `item ${photo.size}`;
+
+        // Stagger the animation slightly
+        item.style.animationDelay = `${(i - currentIndex) * 0.03}s`;
+
+        item.innerHTML = `
+            <img 
+                src="${photo.image}" 
+                alt="${photo.title}" 
+                loading="lazy"
+            >
+
+            <div class="overlay">
+                <h3>${photo.title}</h3>
+                <p>${photo.description}</p>
+            </div>
+        `;
+
+        gallery.appendChild(item);
+    }
+
+
+    currentIndex = nextIndex;
+
+
+    // Hide button when all photos have been loaded
+    if (currentIndex >= photos.length) {
+        seeMoreButton.style.display = "none";
+    }
+}
+
+
+// Load first 20 photos
+loadPhotos();
+
+
+// Load another 20 when "See More" is clicked
+seeMoreButton.addEventListener("click", loadPhotos);
