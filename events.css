@@ -1,4 +1,22 @@
 /* ===========================
+   SCROLL REVEAL
+=========================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===========================
    GLOBAL
 =========================== */
 
@@ -31,6 +49,7 @@ img{
 
 .events-hero {
     position: relative;
+    margin-top: 5vh;
     width: 100%;
     height: 90vh;
     background: #ff8b87;
@@ -272,26 +291,11 @@ img{
 }
 
 
-/* Placeholder rectangle */
-
-.image-placeholder {
+.hero-image img {
     width: 100%;
     height: 100%;
-
-    background: rgba(80, 55, 55, 0.28);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: rgba(255,255,255,0.8);
-
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    letter-spacing: 0.5px;
-
-    border: 1px dashed rgba(255,255,255,0.45);
+    object-fit: cover;
+    display: block;
 }
 
 
@@ -309,89 +313,23 @@ img{
     transform: rotate(-1deg);
 }
 
-
-/* Top-right image */
-
 .image-top {
     width: 38%;
-    height: 145px;
+    height: 200px;
 
     right: 0;
-    top: 0;
+    top: -90px;
 
     z-index: 3;
 
     transform: rotate(1.5deg);
 }
 
-
-/* Bottom-right image */
-
 .image-bottom {
     width: 38%;
-    height: 145px;
+    height: 200px;
 
     right: 0;
-    bottom: 0;
-
-    z-index: 3;
-
-    transform: rotate(-1deg);
-}
-
-
-/* =========================
-   MAIN IMAGE
-========================= */
-
-.main-image {
-
-    width: 65%;
-
-    height: 290px;
-
-    left: 0;
-
-    top: 35px;
-
-    z-index: 2;
-
-    transform: rotate(-1deg);
-}
-
-
-/* =========================
-   TOP RIGHT
-========================= */
-
-.image-top {
-
-    width: 38%;
-
-    height: 145px;
-
-    right: 0;
-
-    top: 0;
-
-    z-index: 3;
-
-    transform: rotate(1.5deg);
-}
-
-
-/* =========================
-   BOTTOM RIGHT
-========================= */
-
-.image-bottom {
-
-    width: 38%;
-
-    height: 145px;
-
-    right: 0;
-
     bottom: 0;
 
     z-index: 3;
@@ -943,6 +881,116 @@ img{
     color:black;
 
     cursor:pointer;
+
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.heading-icon {
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 10px;
+
+    font-size: 1.25rem;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+/* =========================
+   HEADING CONTENT
+========================= */
+
+.heading-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.heading-content h2 {
+
+    margin: 0;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    color: #111;
+
+}
+
+
+/* =========================
+   YELLOW UNDERLINE
+========================= */
+
+.heading-line {
+
+    width: 67px;
+
+    height: 4px;
+
+    margin-top: 7px;
+
+    margin-bottom: 7px;
+
+    background: #ffd45a;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.heading-content p {
+
+    margin: 0;
+
+    font-size: 1.3rem;
+
+    color: #5c4444;
+
+    line-height: 1.4;
 
 }
 

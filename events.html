@@ -37,11 +37,11 @@
                 </p>
 
                 <div class="events-hero-buttons">
-                    <a href="#upcoming-events" class="hero-btn primary">
+                    <a href="#past" class="hero-btn primary">
                         Explore Events
                     </a>
 
-                    <a href="#calendar" class="hero-btn secondary">
+                    <a href="#present" class="hero-btn secondary">
                         View Calendar
                     </a>
                 </div>
@@ -54,23 +54,17 @@
 
                 <!-- Main placeholder -->
                 <div class="hero-image main-image">
-                    <div class="image-placeholder">
-                        <span>Main Event Photo</span>
-                    </div>
+                    <img src="/events_page/cafe_evening.png" alt="cafe">
                 </div>
 
                 <!-- Top-right placeholder -->
                 <div class="hero-image image-top">
-                    <div class="image-placeholder">
-                        <span>Group Photo</span>
-                    </div>
+                    <img src="/events_page/momo_night.png" alt ="momo night">
                 </div>
 
                 <!-- Bottom-right placeholder -->
                 <div class="hero-image image-bottom">
-                    <div class="image-placeholder">
-                        <span>Sports / Cultural Photo</span>
-                    </div>
+                    <img src="/events_page/dashain_ball.png" alt ="ball">
                 </div>
 
             </div>
@@ -83,11 +77,19 @@
 
     <section class="section">
 
-        <h2>Upcoming Schedule</h2>
+        <div class="section-heading reveal">
+
+            <div id="present" class="heading-content">
+                <h2>Upcoming Schedule</h2>
+                <span class="heading-line"></span>
+                <p>Check out what's coming up next.</p>
+            </div>
+
+        </div>
 
         <div class="schedule">
 
-            <div class="schedule-list">
+            <div class="schedule-list reveal">
 
                 <div class="schedule-card">
 
@@ -97,7 +99,7 @@
                     </div>
 
                     <div class="schedule-image">
-                        <img src="stall.jpg" alt="">
+                        <img src="stall.jpg" alt="stall">
                     </div>
 
                     <div class="schedule-content">
@@ -154,7 +156,7 @@
 
             </div>
 
-            <div class="calendar">
+            <div class="calendar reveal">
 
                 <iframe 
                     src="https://calendar.google.com/calendar/embed?src=f9731fb46923f6339913e9b48e91cf918d858b688faed0cfa7c19020db70005a%40group.calendar.google.com&ctz=Europe%2FLondon&showTitle=0&showPrint=0&showCalendars=0&showTz=0"
@@ -173,11 +175,18 @@
 
     <!-- Categories -->
 
-    <section class="section">
+    <section id="past" class="section">
 
-        <h2>Browse by Category</h2>
+        <div class="section-heading reveal">
 
-        <div class="categories">
+            <div class="heading-content">
+                <h2>Browse by Category</h2>
+                <span class="heading-line"></span>
+            </div>
+
+        </div>
+
+        <div class="categories reveal">
 
             <button>📅 All Events</button>
             <button>👥 Social</button>
@@ -198,12 +207,22 @@
 
     <div class="section-header">
 
-        <div>
-            <h2>Past Events</h2>
-            <p>Take a look back at some of our favourite events.</p>
+        <div class="section-heading reveal">
+
+            <div class="heading-content">
+
+                <h2>Past Events</h2>
+
+                <span class="heading-line"></span>
+
+                <p>
+                    Take a look back at some of our favourite events.
+                </p>
+
+            </div>
         </div>
 
-        <div class="carousel-controls">
+        <div class="carousel-controls reveal">
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
@@ -212,7 +231,7 @@
 
     <!-- Carousel -->
 
-    <div class="carousel">
+    <div class="carousel reveal">
 
         <div class="carousel-window">
 
@@ -330,7 +349,7 @@
 
     <!-- CTA -->
 
-    <div class="events-button">
+    <div class="events-button reveal">
 
         <a href="#">
             View All Events →
@@ -345,7 +364,7 @@
 
      <!-- Newsletter -->
 
-    <section class="newsletter">
+    <section class="newsletter reveal">
 
         <div>
             <h2>Never miss an event</h2>
@@ -364,5 +383,6 @@
 
   <div id="footer"></div>
   <script src="loadComponents.js"></script>
+  <script src="scrollReveal.js"></script>
 </body>
 </html>
