@@ -18,6 +18,12 @@ const supabaseClient = window.supabase.createClient(
 const heartCount = document.getElementById("heart-count");
 const heartButton = document.getElementById("heart-button");
 
+const hasLiked = localStorage.getItem("nepsoc-heart");
+
+if (hasLiked) {
+    heartButton.disabled = true;
+}
+
 
 // ===========================
 // LOAD CURRENT COUNT
@@ -58,8 +64,12 @@ heartButton.addEventListener("click", async () => {
         return;
     }
 
-    heartCount.textContent =
-        data.toLocaleString();
+    heartCount.textContent = data.toLocaleString();
+
+    localStorage.setItem("nepsoc-heart", "true");
+
+    // Disable the button
+    heartButton.disabled = true;
 
     heartButton.classList.remove("liked");
 

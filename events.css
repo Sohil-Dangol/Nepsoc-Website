@@ -25,28 +25,378 @@ img{
     width:100%;
 }
 
-/* ===========================
-   HERO
-=========================== */
+/* =========================
+   EVENTS HERO
+========================= */
 
-.events-hero{
-    background:#ff8b87;
-    height:320px;
+.events-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: #ff8b87;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    overflow: hidden;
 
-    text-align:center;
+    padding: 70px 0;
 }
 
-.events-hero h1{
-    font-size:4rem;
-    margin-bottom:15px;
+
+/* Subtle decorative shapes */
+
+.events-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    top: -120px;
+    left: -80px;
 }
 
-.events-hero p{
-    font-size:1.2rem;
+.events-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.18);
+
+    right: -70px;
+    bottom: -100px;
+}
+
+
+/* =========================
+   CONTENT CONTAINER
+========================= */
+
+.events-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1450px, 90%);
+
+    margin: 0 auto;
+
+    min-height: 380px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.events-hero-text {
+
+    width: 45%;
+
+    color: #111;
+}
+
+
+.events-tag {
+
+    display: inline-block;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 50px;
+}
+
+
+.events-hero-text h1 {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(5rem, 8vw, 9rem);
+
+    line-height: 0.9;
+
+    margin: 0 0 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.events-hero-text h2 {
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    margin: 0 0 18px;
+
+    font-weight: 700;
+}
+
+
+.events-hero-text p {
+
+    max-width: 550px;
+
+    font-size: 1.15rem;
+
+    line-height: 1.6;
+
+    margin: 0 0 30px;
+
+    color: #292929;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.events-hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+
+.hero-btn.primary {
+
+    background: #FFD166;
+
+    color: black;
+
+    border: 2px solid #FFD166;
+}
+
+
+.hero-btn.primary:hover {
+
+    background: #FFD166;
+
+    border-color: #FFD166;
+
+    transform: translateY(-2px);
+}
+
+
+.hero-btn.secondary {
+
+    background: transparent;
+
+    color: #111;
+
+    border: 2px solid #111;
+}
+
+
+.hero-btn.secondary:hover {
+
+    background: #111;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   IMAGE COLLAGE
+========================= */
+
+.events-hero-images {
+    position: relative;
+    width: 50%;
+    height: 360px;
+}
+
+
+/* Image frames */
+
+.hero-image {
+    position: absolute;
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    /* This stays when you add images later */
+    border: 4px solid rgba(255,255,255,0.9);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+
+/* Placeholder rectangle */
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(80, 55, 55, 0.28);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    border: 1px dashed rgba(255,255,255,0.45);
+}
+
+
+/* Main image */
+
+.main-image {
+    width: 65%;
+    height: 290px;
+
+    left: 0;
+    top: 35px;
+
+    z-index: 2;
+
+    transform: rotate(-1deg);
+}
+
+
+/* Top-right image */
+
+.image-top {
+    width: 38%;
+    height: 145px;
+
+    right: 0;
+    top: 0;
+
+    z-index: 3;
+
+    transform: rotate(1.5deg);
+}
+
+
+/* Bottom-right image */
+
+.image-bottom {
+    width: 38%;
+    height: 145px;
+
+    right: 0;
+    bottom: 0;
+
+    z-index: 3;
+
+    transform: rotate(-1deg);
+}
+
+
+/* =========================
+   MAIN IMAGE
+========================= */
+
+.main-image {
+
+    width: 65%;
+
+    height: 290px;
+
+    left: 0;
+
+    top: 35px;
+
+    z-index: 2;
+
+    transform: rotate(-1deg);
+}
+
+
+/* =========================
+   TOP RIGHT
+========================= */
+
+.image-top {
+
+    width: 38%;
+
+    height: 145px;
+
+    right: 0;
+
+    top: 0;
+
+    z-index: 3;
+
+    transform: rotate(1.5deg);
+}
+
+
+/* =========================
+   BOTTOM RIGHT
+========================= */
+
+.image-bottom {
+
+    width: 38%;
+
+    height: 145px;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 3;
+
+    transform: rotate(-1deg);
 }
 
 /* ===========================
@@ -121,8 +471,8 @@ img{
     border:none;
     border-radius:50%;
 
-    background:#4169e1;
-    color:white;
+    background:#FFD166;
+    color:black;
 
     font-size:22px;
 
@@ -258,9 +608,9 @@ img{
 
     border-radius:999px;
 
-    background:#4169e1;
+    background:#FFD166;
 
-    color:white;
+    color:black;
 
     text-decoration:none;
 
@@ -485,9 +835,9 @@ img{
 
     border-radius:8px;
 
-    background:#2563eb;
+    background:#FFD166;
 
-    color:#fff;
+    color:black;
 
     font-weight:bold;
 
@@ -540,7 +890,9 @@ img{
 
 .newsletter{
 
-    background:#dcd8ff;
+    background:#08265a;
+
+    color: white;
 
     padding:60px 10%;
 
@@ -586,9 +938,9 @@ img{
 
     border-radius:10px;
 
-    background:#4169e1;
+    background:#FFD166;
 
-    color:#fff;
+    color:black;
 
     cursor:pointer;
 
