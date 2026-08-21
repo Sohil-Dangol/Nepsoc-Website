@@ -1,221 +1,114 @@
-const photos = [
+const events = [
+
     {
-        image: "images/event1.jpg",
-        title: "Welcome Social 2026",
-        description: "Our first event of the academic year.",
-        size: "medium"
+        title: "Momo Lisa Cafe Games Night",
+        date: "15/05/2026",
+
+        photos: [
+            { image: "gallery/2627/cafe/1.jpg", size: "medium" },
+            { image: "gallery/2627/cafe/2.jpg", size: "tall" },
+            { image: "gallery/2627/cafe/3.jpg", size: "small" },
+            { image: "gallery/2627/cafe/4.jpg", size: "medium" },
+            { image: "gallery/2627/cafe/5.jpg", size: "tall" },
+            { image: "gallery/2627/cafe/6.jpg", size: "medium" }
+        ]
     },
     {
-        image: "images/event2.jpg",
-        title: "Freshers Fair",
-        description: "Meeting new students and showcasing NepSoc.",
-        size: "tall"
+        title: "Elections",
+        date: "16/03/2026",
+
+        photos: [
+            { image: "gallery/2627/elections/1.jpeg", size: "tall" }
+        ]
     },
     {
-        image: "images/event3.jpg",
-        title: "Games Night",
-        description: "An evening of board games, cards and laughter.",
-        size: "small"
+        title: "Bar Crawl",
+        date: "30/01/2026",
+
+        photos: [
+            { image: "gallery/2526/crawl-march/1.jpg", size: "tall" },
+            { image: "gallery/2526/crawl-march/2.jpg", size: "medium" }
+        ]
     },
     {
-        image: "images/event4.jpg",
-        title: "Dashain Celebration",
-        description: "Celebrating Dashain with traditional food and tika.",
-        size: "medium"
+        title: "Exec Photoshoot",
+        date: "28/01/2026",
+
+        photos: [
+            { image: "gallery/2526/exec-photoshoot/1.jpg", size: "medium" }
+        ]
     },
+
     {
-        image: "images/event5.jpg",
-        title: "Tihar Night",
-        description: "Music, lights and cultural performances.",
-        size: "tall"
+        title: "Midlands Ice Skating",
+        date: "10/12/2025",
+
+        photos: [
+            { image: "gallery/2526/ice-skating/1.jpg", size: "small" }
+        ]
     },
+
     {
-        image: "images/event6.jpg",
-        title: "Football Tournament",
-        description: "Warwick NepSoc taking on rival universities.",
-        size: "medium"
+        title: "Christmas Market",
+        date: "10/01/2025",
+
+        photos: [
+            { image: "gallery/2526/christmas-market/1.jpg", size: "tall" },
+            { image: "gallery/2526/christmas-market/2.jpg", size: "medium" },
+            { image: "gallery/2526/christmas-market/3.jpg", size: "medium" },
+            { image: "gallery/2526/christmas-market/4.jpg", size: "tall" },
+            { image: "gallery/2526/christmas-market/5.jpg", size: "tall" },
+            { image: "gallery/2526/christmas-market/6.jpg", size: "medium" },
+            { image: "gallery/2526/christmas-market/7.jpg", size: "medium" }
+        ]
     },
+
     {
-        image: "images/event7.jpg",
-        title: "Basketball Match",
-        description: "A competitive afternoon on the court.",
-        size: "small"
-    },
-    {
-        image: "images/event8.jpg",
-        title: "Badminton Tournament",
-        description: "Players competing for the NepSoc title.",
-        size: "tall"
-    },
-    {
-        image: "images/event9.jpg",
-        title: "Committee Dinner",
-        description: "Celebrating a successful term together.",
-        size: "medium"
-    },
-    {
-        image: "images/event10.jpg",
         title: "Charity Fundraiser",
-        description: "Raising money for a meaningful cause.",
-        size: "small"
+        date: "05/06/2026",
+
+        photos: [
+            { image: "gallery/2627/charity/1.jpg", size: "small" }
+        ]
     },
+
     {
-        image: "images/event11.jpg",
         title: "Holi Festival",
-        description: "A colourful day full of fun and celebration.",
-        size: "tall"
+        date: "10/06/2026",
+
+        photos: [
+            { image: "gallery/2627/holi/1.jpg", size: "tall" }
+        ]
     },
+
     {
-        image: "images/event12.jpg",
         title: "Cultural Showcase",
-        description: "Traditional dances and performances on stage.",
-        size: "medium"
+        date: "15/06/2026",
+
+        photos: [
+            { image: "gallery/2627/culture/1.jpg", size: "medium" }
+        ]
     },
+
     {
-        image: "images/event13.jpg",
         title: "Movie Night",
-        description: "Watching a Nepali classic with society members.",
-        size: "small"
-    },
-    {
-        image: "images/event14.jpg",
-        title: "BBQ Social",
-        description: "Relaxing outdoors with great food and friends.",
-        size: "medium"
-    },
-    {
-        image: "images/event15.jpg",
-        title: "Committee Photoshoot",
-        description: "Capturing memories with the 2026 committee.",
-        size: "tall"
-    },
-    {
-        image: "images/event16.jpg",
-        title: "End of Year Ball",
-        description: "Celebrating an unforgettable year together.",
-        size: "medium"
-    },
-    {
-        image: "images/event17.jpg",
-        title: "NepSoc Social",
-        description: "A fun evening with NepSoc members.",
-        size: "medium"
-    },
-    {
-        image: "images/event18.jpg",
-        title: "Nepali Food Night",
-        description: "Enjoying traditional Nepali food together.",
-        size: "tall"
-    },
-    {
-        image: "images/event19.jpg",
-        title: "Sports Day",
-        description: "A day of friendly competition.",
-        size: "small"
-    },
-    {
-        image: "images/event20.jpg",
-        title: "Karaoke Night",
-        description: "Singing, laughing and making memories.",
-        size: "medium"
-    },
-    {
-        image: "images/event21.jpg",
-        title: "Nepali Culture Night",
-        description: "Celebrating Nepali culture and traditions.",
-        size: "tall"
-    },
-    {
-        image: "images/event22.jpg",
-        title: "Day Trip",
-        description: "Exploring somewhere new together.",
-        size: "medium"
-    },
-    {
-        image: "images/event23.jpg",
-        title: "Study Social",
-        description: "Taking a break from studying with friends.",
-        size: "small"
-    },
-    {
-        image: "images/event24.jpg",
-        title: "Christmas Social",
-        description: "Celebrating together before the holidays.",
-        size: "tall"
-    },
-    {
-        image: "images/event25.jpg",
-        title: "Winter Social",
-        description: "A relaxed evening with society members.",
-        size: "medium"
-    },
-    {
-        image: "images/event26.jpg",
-        title: "NepSoc Dinner",
-        description: "Good food and good company.",
-        size: "small"
-    },
-    {
-        image: "images/event27.jpg",
-        title: "Charity Event",
-        description: "Coming together to support a good cause.",
-        size: "tall"
-    },
-    {
-        image: "images/event28.jpg",
-        title: "Football Social",
-        description: "A competitive day on the pitch.",
-        size: "medium"
-    },
-    {
-        image: "images/event29.jpg",
-        title: "Bowling Night",
-        description: "An evening of bowling and friendly competition.",
-        size: "small"
-    },
-    {
-        image: "images/event30.jpg",
-        title: "Spring Social",
-        description: "Enjoying the warmer weather together.",
-        size: "medium"
-    },
-    {
-        image: "images/event31.jpg",
-        title: "Nepali New Year",
-        description: "Celebrating Nepali New Year together.",
-        size: "tall"
-    },
-    {
-        image: "images/event32.jpg",
-        title: "End of Term Social",
-        description: "Finishing the term with the society.",
-        size: "medium"
-    },
-    {
-        image: "images/event33.jpg",
-        title: "Committee Meeting",
-        description: "Planning another successful year for NepSoc.",
-        size: "small"
-    },
-    {
-        image: "images/event34.jpg",
-        title: "Picnic",
-        description: "A relaxing afternoon outdoors.",
-        size: "tall"
-    },
-    {
-        image: "images/event35.jpg",
-        title: "Games Tournament",
-        description: "Members competing in a range of games.",
-        size: "medium"
-    },
-    {
-        image: "images/event36.jpg",
-        title: "Farewell Social",
-        description: "Saying goodbye to another great year.",
-        size: "tall"
+        date: "20/06/2026",
+
+        photos: [
+            { image: "gallery/2627/movie/1.jpg", size: "small" }
+        ]
     }
+
 ];
+
+const photos = events.flatMap(event =>
+    event.photos.map(photo => ({
+        image: photo.image,
+        title: event.title,
+        description: event.date,
+        size: photo.size
+    }))
+);
 
 const gallery = document.getElementById("gallery");
 const seeMoreButton = document.getElementById("see-more");
@@ -231,7 +124,6 @@ function loadPhotos() {
         photos.length
     );
 
-
     for (let i = currentIndex; i < nextIndex; i++) {
 
         const photo = photos[i];
@@ -240,8 +132,8 @@ function loadPhotos() {
 
         item.className = `item ${photo.size}`;
 
-        // Stagger the animation slightly
-        item.style.animationDelay = `${(i - currentIndex) * 0.03}s`;
+        item.style.animationDelay =
+            `${(i - currentIndex) * 0.03}s`;
 
         item.innerHTML = `
             <img 
@@ -256,18 +148,68 @@ function loadPhotos() {
             </div>
         `;
 
+        item.addEventListener("mouseenter", () => {
+            expandColumn(item);
+        });
+
+        item.addEventListener("mouseleave", resetColumns);
+
         gallery.appendChild(item);
     }
 
-
     currentIndex = nextIndex;
 
-
-    // Hide button when all photos have been loaded
     if (currentIndex >= photos.length) {
         seeMoreButton.style.display = "none";
     }
 }
+
+// ---- Hover expand: widen hovered column, shrink the rest ----
+
+function getColumnCount() {
+    const w = window.innerWidth;
+    if (w <= 400) return 1;
+    if (w <= 600) return 2;
+    if (w <= 900) return 3;
+    return 4;
+}
+
+let galleryCols = getColumnCount();
+
+function expandColumn(item) {
+    if (galleryCols <= 1) return;
+
+    const galleryRect = gallery.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+    const colWidth = galleryRect.width / galleryCols;
+
+    const colIndex = Math.min(
+        galleryCols - 1,
+        Math.floor((itemRect.left - galleryRect.left) / colWidth)
+    );
+
+    const EXPAND = 2.2;
+
+    const tracks = Array.from({ length: galleryCols }, (_, i) =>
+        i === colIndex ? `${EXPAND}fr` : "1fr"
+    );
+
+    gallery.style.gridTemplateColumns = tracks.join(" ");
+    gallery.style.gridAutoRows = "180px"; // slight vertical growth, tweak to taste
+}
+
+function resetColumns() {
+    gallery.style.gridTemplateColumns = `repeat(${galleryCols}, 1fr)`;
+    gallery.style.gridAutoRows = "180px";
+}
+
+window.addEventListener("resize", () => {
+    galleryCols = getColumnCount();
+    resetColumns();
+});
+
+resetColumns();
+
 
 
 // Load first 20 photos
