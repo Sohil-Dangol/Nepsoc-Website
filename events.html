@@ -94,8 +94,8 @@
                 <div class="schedule-card">
 
                     <div class="date-box">
-                        <span class="month">JAN</span>
-                        <span class="day">17</span>
+                        <span class="month">Sep</span>
+                        <span class="day">30</span>
                     </div>
 
                     <div class="schedule-image">
@@ -107,7 +107,7 @@
                         <p class="schedule-time">10 AM - 6 PM   Sports Hub</p>
                     </div>
 
-                    <button class="join-btn">
+                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
                         Join Now
                     </button>
 
@@ -129,9 +129,10 @@
                         <p class="schedule-time">18:00 - 20:00    A0.14</p>
                     </div>
 
-                    <button class="join-btn">
+                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
                         Join Now
                     </button>
+                  
                 </div>    
                 <div class="schedule-card">
 
@@ -146,10 +147,10 @@
 
                     <div class="schedule-content">
                         <h3>Arts and Crafts</h3>
-                        <p class="schedule-time">18:00 - 20:00    A0.14</p>
+                        <p class="schedule-time">14:00 - 16:00    OC0.05</p>
                     </div>
 
-                    <button class="join-btn">
+                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
                         Join Now
                     </button>
                 </div>
@@ -366,17 +367,31 @@
 
     <section class="newsletter reveal">
 
-        <div>
-            <h2>Never miss an event</h2>
-            <p>Subscribe for updates on upcoming events.</p>
-        </div>
+    <div>
+        <h2>Never miss an event</h2>
+        <p>Subscribe for updates on upcoming events.</p>
+    </div>
 
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
-        </form>
+    <form id="newsletter-form">
 
-    </section>
+        <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    <p id="newsletter-message"></p>
+
+</section>
 
 
 </main>
