@@ -670,6 +670,9 @@ img{
 
     flex: none;
 }
+.carousel.expanded .event-card img {
+    height: 350px;
+}
 /* ===========================
    EVENT CATEGORIES
 =========================== */
