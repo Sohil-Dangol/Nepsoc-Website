@@ -1,403 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events</title>
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="events.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events</title>
+
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
+
 <body>
-  <div id="navbar"></div>
 
-  <main class="events-page">
-    
-    <!-- Hero -->
-    <section class="events-hero">
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
-        <div class="events-hero-content">
 
-            <!-- LEFT: TEXT -->
-            <div class="events-hero-text">
+    <main class="events-page">
 
-                <span class="events-tag">NEPSOC EVENTS</span>
 
-                <h1>Events</h1>
+        <!-- ================= HERO ================= -->
 
-                <h2>Where all the fun is at.</h2>
+        <section class="events-hero">
+
+            <div class="events-hero-content">
+
+
+                <!-- Text -->
+
+                <div class="events-hero-text">
+
+                    <span class="events-tag">NEPSOC EVENTS</span>
+
+                    <h1>Events</h1>
+
+                    <h2>Where all the fun is at.</h2>
+
+                    <p>
+                        From cultural celebrations to sports, socials and
+                        workshops, there is always something happening.
+                    </p>
+
+
+                    <div class="events-hero-buttons">
+
+                        <a href="#upcoming" class="hero-btn primary">
+                            Explore Events
+                        </a>
+
+                        <a href="#past" class="hero-btn secondary">
+                            View Past Events
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image Collage -->
+
+                <div class="events-hero-images">
+
+                    <div class="hero-image main-image">
+                        <img
+                            src="/events_page/cafe_evening.png"
+                            alt="NepSoc cafe event">
+                    </div>
+
+
+                    <div class="hero-image image-top">
+                        <img
+                            src="/events_page/momo_night.png"
+                            alt="Momo Night">
+                    </div>
+
+
+                    <div class="hero-image image-bottom">
+                        <img
+                            src="/events_page/dashain_ball.png"
+                            alt="Dashain Ball">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= UPCOMING EVENTS ================= -->
+
+        <section id="upcoming" class="section">
+
+            <div class="section-heading reveal">
+
+                <div class="heading-content">
+
+                    <h2>Upcoming Schedule</h2>
+
+                    <span class="heading-line"></span>
+
+                    <p>
+                        Check out what's coming up next.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="schedule">
+
+
+                <!-- Event List -->
+
+                <div class="schedule-list reveal">
+
+
+                    <!-- Event 1 -->
+
+                    <div class="schedule-card">
+
+                        <div class="date-box">
+
+                            <span class="month">Sep</span>
+                            <span class="day">30</span>
+
+                        </div>
+
+
+                        <div class="schedule-image">
+
+                            <img
+                                src="stall.jpg"
+                                alt="Freshers Fair">
+
+                        </div>
+
+
+                        <div class="schedule-content">
+
+                            <h3>Freshers Fair</h3>
+
+                            <p class="schedule-time">
+                                10 AM – 6 PM · Sports Hub
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="join-btn"
+                            onclick="window.open(
+                            'https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889',
+                            '_blank'
+                        )">
+
+                            Join Now
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Event 2 -->
+
+                    <div class="schedule-card">
+
+                        <div class="date-box">
+
+                            <span class="month">Oct</span>
+                            <span class="day">1</span>
+
+                        </div>
+
+
+                        <div class="schedule-image">
+
+                            <img
+                                src="games-night.jpg"
+                                alt="Games Night">
+
+                        </div>
+
+
+                        <div class="schedule-content">
+
+                            <h3>Games Night</h3>
+
+                            <p class="schedule-time">
+                                18:00 – 20:00 · A0.14
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="join-btn"
+                            onclick="window.open(
+                            'https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889',
+                            '_blank'
+                        )">
+
+                            Join Now
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Event 3 -->
+
+                    <div class="schedule-card">
+
+                        <div class="date-box">
+
+                            <span class="month">Oct</span>
+                            <span class="day">3</span>
+
+                        </div>
+
+
+                        <div class="schedule-image">
+
+                            <img
+                                src="arts.jpg"
+                                alt="Arts and Crafts">
+
+                        </div>
+
+
+                        <div class="schedule-content">
+
+                            <h3>Arts and Crafts</h3>
+
+                            <p class="schedule-time">
+                                14:00 – 16:00 · OC0.05
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="join-btn"
+                            onclick="window.open(
+                            'https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889',
+                            '_blank'
+                        )">
+
+                            Join Now
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Calendar -->
+
+                <div id="calendar" class="calendar reveal">
+
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?src=f9731fb46923f6339913e9b48e91cf918d858b688faed0cfa7c19020db70005a%40group.calendar.google.com&ctz=Europe%2FLondon&showTitle=0&showPrint=0&showCalendars=0&showTz=0"
+                        style="border:0"
+                        width="800"
+                        height="600"
+                        frameborder="0"
+                        scrolling="no">
+
+                    </iframe>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= EVENTS SNEAK PEEK ================= -->
+
+        <section class="events-preview">
+
+            <div class="events-preview-header">
+
+
+                <div class="section-heading reveal">
+
+                <div class="heading-content">
+
+                    <h2>Sneak Peak</h2>
+
+                    <span class="heading-line"></span>
+
+                    <p>
+                        A glimpse of events from the past
+                    </p>
+
+                </div>
+
+            </div>
+
+            </div>
+
+
+
+            <div class="events-preview-grid">
+
+
+                <div class="preview-image reveal">
+
+                    <img
+                        src="/gallery/2627/cafe/1.jpg"
+                        alt="NepSoc event">
+
+                </div>
+
+
+                <div class="preview-image reveal">
+
+                    <img
+                        src="/gallery/2526/christmas-market/1.jpg"
+                        alt="NepSoc members at an event">
+
+                </div>
+
+
+                <div class="preview-image reveal">
+
+                    <img
+                        src="/gallery/circle.png"
+                        alt="NepSoc event activities">
+
+                </div>
+
+
+            </div>
+
+            <div class="events-button reveal">
+
+                <a href="gallery.html" class="gallery-link">
+                    View Gallery →
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PAST EVENTS ================= -->
+
+        <section id="past" class="section">
+
+
+            <!-- Header -->
+
+            <div class="section-header">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="heading-content">
+
+                        <h2>Past Events</h2>
+
+                        <span class="heading-line"></span>
+
+                        <p>
+                            Take a look back at some of our favourite events.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Carousel Controls -->
+
+                <div class="carousel-controls reveal">
+
+                    <button class="prev">
+                        &#10094;
+                    </button>
+
+                    <button class="next">
+                        &#10095;
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Carousel -->
+
+            <div class="carousel reveal">
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+                        <!-- Cards generated by JavaScript -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- View All Events -->
+
+            <div class="events-button reveal">
+
+                <button id="toggle-events">
+                    View All Events →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter reveal">
+
+            <div>
+
+                <h2>Never miss an event</h2>
 
                 <p>
-                    From cultural celebrations to sports, socials and
-                    workshops, there is always something happening.
-                </p>
-
-                <div class="events-hero-buttons">
-                    <a href="#past" class="hero-btn primary">
-                        Explore Events
-                    </a>
-
-                    <a href="#present" class="hero-btn secondary">
-                        View Calendar
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT: IMAGE COLLAGE -->
-            <div class="events-hero-images">
-
-                <!-- Main placeholder -->
-                <div class="hero-image main-image">
-                    <img src="/events_page/cafe_evening.png" alt="cafe">
-                </div>
-
-                <!-- Top-right placeholder -->
-                <div class="hero-image image-top">
-                    <img src="/events_page/momo_night.png" alt ="momo night">
-                </div>
-
-                <!-- Bottom-right placeholder -->
-                <div class="hero-image image-bottom">
-                    <img src="/events_page/dashain_ball.png" alt ="ball">
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Schedule -->
-
-    <section class="section">
-
-        <div class="section-heading reveal">
-
-            <div id="present" class="heading-content">
-                <h2>Upcoming Schedule</h2>
-                <span class="heading-line"></span>
-                <p>Check out what's coming up next.</p>
-            </div>
-
-        </div>
-
-        <div class="schedule">
-
-            <div class="schedule-list reveal">
-
-                <div class="schedule-card">
-
-                    <div class="date-box">
-                        <span class="month">Sep</span>
-                        <span class="day">30</span>
-                    </div>
-
-                    <div class="schedule-image">
-                        <img src="stall.jpg" alt="stall">
-                    </div>
-
-                    <div class="schedule-content">
-                        <h3>Freshers Fair</h3>
-                        <p class="schedule-time">10 AM - 6 PM   Sports Hub</p>
-                    </div>
-
-                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
-                        Join Now
-                    </button>
-
-                </div>
-
-                <div class="schedule-card">
-
-                    <div class="date-box">
-                        <span class="month">Oct</span>
-                        <span class="day">1</span>
-                    </div>
-
-                    <div class="schedule-image">
-                        <img src="games-night.jpg" alt="Games Night">
-                    </div>
-
-                    <div class="schedule-content">
-                        <h3>Games Night</h3>
-                        <p class="schedule-time">18:00 - 20:00    A0.14</p>
-                    </div>
-
-                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
-                        Join Now
-                    </button>
-                  
-                </div>    
-                <div class="schedule-card">
-
-                    <div class="date-box">
-                        <span class="month">Oct</span>
-                        <span class="day">3</span>
-                    </div>
-
-                    <div class="schedule-image">
-                        <img src="arts.jpg" alt="Arts and Crafts">
-                    </div>
-
-                    <div class="schedule-content">
-                        <h3>Arts and Crafts</h3>
-                        <p class="schedule-time">14:00 - 16:00    OC0.05</p>
-                    </div>
-
-                    <button class="join-btn" onclick="window.open('https://welcomeweek.warwick.ac.uk/users/optional/324cd5ac-2802-4d2b-bc42-ecba190e4d84/d663f702-38a1-4677-9a0b-5298a541e889', '_blank')">
-                        Join Now
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="calendar reveal">
-
-                <iframe 
-                    src="https://calendar.google.com/calendar/embed?src=f9731fb46923f6339913e9b48e91cf918d858b688faed0cfa7c19020db70005a%40group.calendar.google.com&ctz=Europe%2FLondon&showTitle=0&showPrint=0&showCalendars=0&showTz=0"
-                    style="border:0"
-                    width="800"
-                    height="600"
-                    frameborder="0"
-                    scrolling="no">
-                </iframe>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Categories -->
-
-    <section id="past" class="section">
-
-        <div class="section-heading reveal">
-
-            <div class="heading-content">
-                <h2>Browse by Category</h2>
-                <span class="heading-line"></span>
-            </div>
-
-        </div>
-
-        <div class="categories reveal">
-
-            <button>📅 All Events</button>
-            <button>👥 Social</button>
-            <button>🏆 Sports</button>
-            <button>📚 Academic</button>
-            <button>🎭 Cultural</button>
-            <button>❤️ Fundraiser</button>
-            <button>🛠 Workshops</button>
-
-        </div>
-
-    </section>
-
-    <!-- Featured -->
-    <section class="section">
-
-    <!-- Header -->
-
-    <div class="section-header">
-
-        <div class="section-heading reveal">
-
-            <div class="heading-content">
-
-                <h2>Past Events</h2>
-
-                <span class="heading-line"></span>
-
-                <p>
-                    Take a look back at some of our favourite events.
+                    Subscribe for updates on upcoming events.
                 </p>
 
             </div>
-        </div>
 
-        <div class="carousel-controls reveal">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
 
-    </div>
+            <form id="newsletter-form">
 
-    <!-- Carousel -->
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required>
 
-    <div class="carousel reveal">
 
-        <div class="carousel-window">
+                <button type="submit">
 
-            <div class="carousel-track">
+                    Subscribe
 
-                <!-- Card 1 -->
+                </button>
 
-                <article class="event-card">
 
-                    <img src="momo-night.png" alt="Momo Night">
+            </form>
 
-                    <div class="event-info">
 
-                        <h3>Momo Night</h3>
+            <p id="newsletter-message"></p>
 
-                        <div class="event-meta">
 
-                            <p>📅 15 October</p>
-                            <p>🕒 18:00 – 21:00</p>
-                            <p>📍 Warwick SU</p>
+        </section>
 
-                        </div>
 
-                        <p class="description">
-                            Homemade momo, games and socialising!
-                        </p>
+    </main>
 
-                    </div>
 
-                </article>
 
-                <!-- Card 2 -->
+    <!-- Footer -->
 
-                <article class="event-card">
+    <div id="footer"></div>
 
-                    <img src="arts.jpg" alt="Arts & Crafts">
 
-                    <div class="event-info">
 
-                        <h3>Arts & Crafts</h3>
+    <!-- Scripts -->
+    <script src="eventsData.js"></script>
 
-                        <div class="event-meta">
+    <script src="carousel.js"></script>
 
-                            <p>📅 20 October</p>
-                            <p>🕒 17:00 – 19:00</p>
-                            <p>📍 Oculus</p>
+    <script src="loadComponents.js"></script>
 
-                        </div>
+    <script src="scrollReveal.js"></script>
 
-                        <p class="description">
-                            Create mandalas, bracelets and more.
-                        </p>
 
-                    </div>
-
-                </article>
-
-                <!-- Card 3 -->
-
-                <article class="event-card">
-
-                    <img src="hot-ones.png" alt="Hot Ones">
-
-                    <div class="event-info">
-
-                        <h3>Hot Ones</h3>
-
-                        <div class="event-meta">
-
-                            <p>📅 5 November</p>
-                            <p>🕒 19:00</p>
-                            <p>📍 Warwick Campus</p>
-
-                        </div>
-
-                        <p class="description">
-                            Challenge your friends with spicy wings.
-                        </p>
-
-                    </div>
-
-                </article>
-
-                <!-- Card 4 -->
-
-                <article class="event-card">
-
-                    <img src="event4.jpg" alt="Bar Crawl">
-
-                    <div class="event-info">
-
-                        <h3>Bar Crawl</h3>
-
-                        <div class="event-meta">
-
-                            <p>📅 12 November</p>
-                            <p>🕒 18:30</p>
-                            <p>📍 Coventry</p>
-
-                        </div>
-
-                        <p class="description">
-                            Explore the city's best nightlife together.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- CTA -->
-
-    <div class="events-button reveal">
-
-        <a href="#">
-            View All Events →
-        </a>
-
-    </div>
-
-</section>
-<script src="carousel.js"></script>
-
-    </section>
-
-     <!-- Newsletter -->
-
-    <section class="newsletter reveal">
-
-    <div>
-        <h2>Never miss an event</h2>
-        <p>Subscribe for updates on upcoming events.</p>
-    </div>
-
-    <form id="newsletter-form">
-
-        <input
-            type="email"
-            id="newsletter-email"
-            name="email"
-            placeholder="Enter your email"
-            autocomplete="email"
-            required
-        >
-
-        <button type="submit">
-            Subscribe
-        </button>
-
-    </form>
-
-    <p id="newsletter-message"></p>
-
-</section>
-
-
-</main>
-
-  <div id="footer"></div>
-  <script src="loadComponents.js"></script>
-  <script src="scrollReveal.js"></script>
 </body>
+
 </html>

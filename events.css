@@ -265,6 +265,7 @@ img{
 }
 
 
+
 /* =========================
    IMAGE COLLAGE
 ========================= */
@@ -343,7 +344,7 @@ img{
 
 .section{
     width:min(1400px,95%);
-    margin:70px auto;
+    margin:450px auto;
 }
 
 .section-header{
@@ -362,6 +363,79 @@ img{
     text-decoration:none;
     color:#4169e1;
     font-weight:bold;
+}
+
+/* ===========================
+   EVENTS PREVIEW
+=========================== */
+
+.events-preview {
+    width: min(1400px, 95%);
+    margin: 450px auto;
+}
+
+.events-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 35px;
+}
+
+
+/* Gallery button */
+
+.gallery-link {
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border-radius: 999px;
+
+    background: #FFD166;
+    color: black;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.gallery-link:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Images */
+
+.events-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.preview-image,
+.preview-image.large {
+    height: 60vh;
+
+    overflow: hidden;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.preview-image:hover img {
+    transform: scale(1.05);
 }
 
 /* =====================================
@@ -527,44 +601,75 @@ img{
     line-height:1.6;
 }
 
-/* =====================================
-   CTA
-===================================== */
+/* ===========================
+   EVENTS BUTTON
+=========================== */
 
-.events-button{
+.events-button {
+    margin-top: 45px;
+    width: 100%;
 
-    margin-top:45px;
-
-    text-align:center;
-}
-
-.events-button a{
-
-    display:inline-block;
-
-    padding:16px 34px;
-
-    border-radius:999px;
-
-    background:#FFD166;
-
-    color:black;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.25s;
-}
-
-.events-button a:hover{
-
-    background:#3158d8;
-
-    transform:translateY(-3px);
+    display: flex;
+    justify-content: center;
 }
 
 
+/* Applies to BOTH <a> and <button> */
+
+.events-button a,
+.events-button button {
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #FFD166;
+    color: black;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+/* Hover effect for BOTH */
+
+.events-button a:hover,
+.events-button button:hover {
+    background: #3158d8;
+    transform: translateY(-3px);
+}
+
+
+/* ===========================
+   EXPANDED EVENTS GRID
+=========================== */
+
+.carousel.expanded .carousel-window {
+    overflow: visible;
+}
+
+.carousel.expanded .carousel-track {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    transform: none !important;
+}
+
+.carousel.expanded .event-card {
+    width: 100%;
+
+    flex: none;
+}
 /* ===========================
    EVENT CATEGORIES
 =========================== */
@@ -1023,6 +1128,47 @@ img{
 
     .event-card{
         flex:0 0 280px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .events-preview {
+        padding: 70px 6%;
+    }
+
+    .events-preview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .events-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-image,
+    .preview-image.large {
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .carousel.expanded .carousel-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .carousel.expanded .carousel-track {
+        grid-template-columns: 1fr;
     }
 
 }
