@@ -12,69 +12,107 @@ const supabaseClient = window.supabase.createClient(
 
 
 // ===========================
-// ELEMENTS
+// HEART
 // ===========================
 
 const heartCount = document.getElementById("heart-count");
 const heartButton = document.getElementById("heart-button");
 
-const hasLiked = localStorage.getItem("nepsoc-heart");
+if (heartCount && heartButton) {
 
-if (hasLiked) {
-    heartButton.disabled = true;
+    const hasLiked = localStorage.getItem("nepsoc-heart");
+
+    if (hasLiked) {
+        heartButton.disabled = true;
+    }
+
+    async function loadHeartCount() {
+
+        const { data, error } = await supabaseClient
+            .from("site_stats")
+            .select("heart_count")
+            .eq("id", 1)
+            .single();
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+
+        heartCount.textContent = data.heart_count.toLocaleString();
+    }
+
+    loadHeartCount();
+
+    heartButton.addEventListener("click", async () => {
+
+        const { data, error } = await supabaseClient
+            .rpc("increment_heart");
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+
+        heartCount.textContent = data.toLocaleString();
+
+        localStorage.setItem("nepsoc-heart", "true");
+
+        heartButton.disabled = true;
+
+        heartButton.classList.remove("liked");
+        void heartButton.offsetWidth;
+        heartButton.classList.add("liked");
+    });
 }
 
 
+
 // ===========================
-// LOAD CURRENT COUNT
+// NEWSLETTER
 // ===========================
 
-async function loadHeartCount() {
+const newsletterForm = document.getElementById("newsletter-form");
+const newsletterEmail = document.getElementById("newsletter-email");
+const newsletterMessage = document.getElementById("newsletter-message");
 
-    const { data, error } = await supabaseClient
-        .from("site_stats")
-        .select("heart_count")
-        .eq("id", 1)
-        .single();
+if (newsletterForm && newsletterEmail && newsletterMessage) {
 
-    if (error) {
-        console.error("SUPABASE ERROR:", error);
-        heartCount.textContent = "ERROR";
-        return;
-    }
+    newsletterForm.addEventListener("submit", async (e) => {
 
-    heartCount.textContent =
-        data.heart_count.toLocaleString();
+        e.preventDefault();
+
+        const email = newsletterEmail.value.trim().toLowerCase();
+
+        newsletterMessage.textContent = "Subscribing...";
+
+        const { error } = await supabaseClient
+            .from("subscribers")
+            .insert({
+                email: email
+            });
+
+        console.log("Email:", email);
+        console.log("Error:", error);
+
+        if (error) {
+
+            console.error("NEWSLETTER ERROR:", error);
+
+            if (error.code === "23505") {
+                newsletterMessage.textContent =
+                    "You're already subscribed!";
+            } else {
+                newsletterMessage.textContent =
+                    "Something went wrong. Please try again.";
+            }
+
+            return;
+        }
+
+        newsletterMessage.textContent =
+            "Thanks for subscribing! 🎉";
+
+        newsletterForm.reset();
+    });
 }
-
-loadHeartCount();
-
-
-// ===========================
-// HEART BUTTON
-// ===========================
-
-heartButton.addEventListener("click", async () => {
-
-    const { data, error } = await supabaseClient
-        .rpc("increment_heart");
-
-    if (error) {
-        console.error("SUPABASE ERROR:", error);
-        return;
-    }
-
-    heartCount.textContent = data.toLocaleString();
-
-    localStorage.setItem("nepsoc-heart", "true");
-
-    // Disable the button
-    heartButton.disabled = true;
-
-    heartButton.classList.remove("liked");
-
-    // Restart animation
-    void heartButton.offsetWidth;
-
-    heartButton.classList.add("liked");
-});
