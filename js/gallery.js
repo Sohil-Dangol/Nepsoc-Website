@@ -26,8 +26,8 @@ const events = [
         date: "30/01/2026",
 
         photos: [
-            { image: "../images/gallery/2526/crawl-march/1.jpg", size: "tall" },
-            { image: "../images/gallery/2526/crawl-march/2.jpg", size: "medium" }
+            { image: "../images/gallery/2526/crawl-march/1.JPG", size: "tall" },
+            { image: "../images/gallery/2526/crawl-march/2.JPG", size: "medium" }
         ]
     },
     {
@@ -54,8 +54,8 @@ const events = [
 
         photos: [
             { image: "../images/gallery/2526/christmas-market/1.jpg", size: "tall" },
-            { image: "../images/gallery/2526/christmas-market/2.jpg", size: "medium" },
-            { image: "../images/gallery/2526/christmas-market/3.jpg", size: "medium" },
+            { image: "../images/gallery/2526/christmas-market/2.JPG", size: "medium" },
+            { image: "../images/gallery/2526/christmas-market/3.JPG", size: "medium" },
             { image: "../images/gallery/2526/christmas-market/4.jpg", size: "tall" },
             { image: "../images/gallery/2526/christmas-market/5.jpg", size: "tall" },
             { image: "../images/gallery/2526/christmas-market/6.jpg", size: "medium" },
