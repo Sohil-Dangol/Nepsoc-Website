@@ -1,0 +1,111 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2rem 0 0.5rem;
+    height: 120px;
+
+    background: #ff8b87;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: clamp(15px, 3vw, 40px);
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* ===========================
+   RESPONSIVE NAVBAR
+=========================== */
+
+/* Tablets / smaller laptops */
+@media (max-width: 900px) {
+
+    .navbar {
+        height: 100px;
+        padding: 0 1.5rem 0 0.5rem;
+    }
+
+    .logo {
+        width: clamp(75px, 12vw, 110px);
+    }
+
+    .navbar ul {
+        gap: clamp(12px, 2.5vw, 25px);
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 85px;
+        padding: 0 1rem 0 0.4rem;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 0.7rem 0 0.3rem;
+    }
+
+    .logo {
+        width: 65px;
+    }
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 0.62rem;
+        letter-spacing: 0.5px;
+    }
+}

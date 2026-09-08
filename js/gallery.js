@@ -5,12 +5,12 @@ const events = [
         date: "15/05/2026",
 
         photos: [
-            { image: "gallery/2627/cafe/1.jpg", size: "medium" },
-            { image: "gallery/2627/cafe/2.jpg", size: "tall" },
-            { image: "gallery/2627/cafe/3.jpg", size: "small" },
-            { image: "gallery/2627/cafe/4.jpg", size: "medium" },
-            { image: "gallery/2627/cafe/5.jpg", size: "tall" },
-            { image: "gallery/2627/cafe/6.jpg", size: "medium" }
+            { image: "../images/gallery/2627/cafe/1.jpg", size: "medium" },
+            { image: "../images/gallery/2627/cafe/2.jpg", size: "tall" },
+            { image: "../images/gallery/2627/cafe/3.jpg", size: "small" },
+            { image: "../images/gallery/2627/cafe/4.jpg", size: "medium" },
+            { image: "../images/gallery/2627/cafe/5.jpg", size: "tall" },
+            { image: "../images/gallery/2627/cafe/6.jpg", size: "medium" }
         ]
     },
     {
@@ -18,7 +18,7 @@ const events = [
         date: "16/03/2026",
 
         photos: [
-            { image: "gallery/2627/elections/1.jpeg", size: "tall" }
+            { image: "../images/gallery/2627/elections/1.jpeg", size: "tall" }
         ]
     },
     {
@@ -26,8 +26,8 @@ const events = [
         date: "30/01/2026",
 
         photos: [
-            { image: "gallery/2526/crawl-march/1.jpg", size: "tall" },
-            { image: "gallery/2526/crawl-march/2.jpg", size: "medium" }
+            { image: "../images/gallery/2526/crawl-march/1.jpg", size: "tall" },
+            { image: "../images/gallery/2526/crawl-march/2.jpg", size: "medium" }
         ]
     },
     {
@@ -35,7 +35,7 @@ const events = [
         date: "28/01/2026",
 
         photos: [
-            { image: "gallery/2526/exec-photoshoot/1.jpg", size: "medium" }
+            { image: "../images/gallery/2526/exec-photoshoot/1.jpg", size: "medium" }
         ]
     },
 
@@ -44,7 +44,7 @@ const events = [
         date: "10/12/2025",
 
         photos: [
-            { image: "gallery/2526/ice-skating/1.jpg", size: "small" }
+            { image: "../images/gallery/2526/ice-skating/1.jpg", size: "small" }
         ]
     },
 
@@ -53,13 +53,13 @@ const events = [
         date: "10/01/2025",
 
         photos: [
-            { image: "gallery/2526/christmas-market/1.jpg", size: "tall" },
-            { image: "gallery/2526/christmas-market/2.jpg", size: "medium" },
-            { image: "gallery/2526/christmas-market/3.jpg", size: "medium" },
-            { image: "gallery/2526/christmas-market/4.jpg", size: "tall" },
-            { image: "gallery/2526/christmas-market/5.jpg", size: "tall" },
-            { image: "gallery/2526/christmas-market/6.jpg", size: "medium" },
-            { image: "gallery/2526/christmas-market/7.jpg", size: "medium" }
+            { image: "../images/gallery/2526/christmas-market/1.jpg", size: "tall" },
+            { image: "../images/gallery/2526/christmas-market/2.jpg", size: "medium" },
+            { image: "../images/gallery/2526/christmas-market/3.jpg", size: "medium" },
+            { image: "../images/gallery/2526/christmas-market/4.jpg", size: "tall" },
+            { image: "../images/gallery/2526/christmas-market/5.jpg", size: "tall" },
+            { image: "../images/gallery/2526/christmas-market/6.jpg", size: "medium" },
+            { image: "../images/gallery/2526/christmas-market/7.jpg", size: "medium" }
         ]
     },
 
@@ -68,7 +68,7 @@ const events = [
         date: "05/06/2026",
 
         photos: [
-            { image: "gallery/2627/charity/1.jpg", size: "small" }
+            { image: "../images/gallery/2627/charity/1.jpg", size: "small" }
         ]
     },
 
@@ -77,7 +77,7 @@ const events = [
         date: "10/06/2026",
 
         photos: [
-            { image: "gallery/2627/holi/1.jpg", size: "tall" }
+            { image: "../images/gallery/2627/holi/1.jpg", size: "tall" }
         ]
     },
 
@@ -86,7 +86,7 @@ const events = [
         date: "15/06/2026",
 
         photos: [
-            { image: "gallery/2627/culture/1.jpg", size: "medium" }
+            { image: "../images/gallery/2627/culture/1.jpg", size: "medium" }
         ]
     },
 
@@ -95,7 +95,7 @@ const events = [
         date: "20/06/2026",
 
         photos: [
-            { image: "gallery/2627/movie/1.jpg", size: "small" }
+            { image: "../images/gallery/2627/movie/1.jpg", size: "small" }
         ]
     }
 

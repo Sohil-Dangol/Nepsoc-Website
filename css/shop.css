@@ -142,6 +142,45 @@ body {
     }
 
 }
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+
+/* ===========================
+   TABLETS / SMALL LAPTOPS
+=========================== */
+
+@media (max-width: 1000px) {
+
+    .shop-page {
+        padding-top: 80px;
+    }
+
+    .shop-content {
+        margin-bottom: 65px;
+        padding: 0 5%;
+    }
+
+    .shop-label {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+    }
+
+    .coming-soon {
+        font-size: clamp(5rem, 13vw, 8rem);
+        letter-spacing: -4px;
+    }
+
+    .shop-description {
+        font-size: 1.1rem;
+    }
+
+    .reel-set span {
+        font-size: 1.05rem;
+    }
+
+}
 
 
 /* ===========================
@@ -151,37 +190,83 @@ body {
 @media (max-width: 600px) {
 
     .shop-page {
-        padding-top: 80px;
+        padding-top: 65px;
     }
-
 
     .shop-content {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+        padding: 0 20px;
     }
-
 
     .shop-label {
-        font-size: 0.8rem;
-        letter-spacing: 3px;
+        font-size: 0.75rem;
+        letter-spacing: 2.5px;
     }
-
 
     .coming-soon {
-        font-size: clamp(3.5rem, 16vw, 6rem);
-
+        font-size: clamp(3.2rem, 16vw, 5.5rem);
         letter-spacing: -3px;
+        line-height: 0.9;
     }
-
 
     .shop-description {
-        font-size: 1rem;
-
-        padding: 0 25px;
+        margin-top: 25px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0;
     }
 
+    .shop-reel {
+        padding: 18px 0;
+    }
 
     .reel-set span {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+    }
+
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 400px) {
+
+    .shop-page {
+        padding-top: 50px;
+    }
+
+    .shop-content {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    .shop-label {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .coming-soon {
+        font-size: clamp(2.7rem, 17vw, 4.5rem);
+        letter-spacing: -2px;
+        line-height: 0.9;
+    }
+
+    .shop-description {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .shop-reel {
+        padding: 15px 0;
+    }
+
+    .reel-set span {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
     }
 
 }

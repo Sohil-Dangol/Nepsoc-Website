@@ -839,60 +839,6 @@ body {
     opacity: 0.75;
 }
 
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-@media (max-width:1200px){
-
-    .what-we-do-container{
-
-        grid-template-columns:1fr;
-    }
-
-    .what-left{
-
-        max-width:700px;
-    }
-
-    .carousel-window{
-
-        width:700px;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .carousel-window{
-
-        width:340px;
-    }
-
-    .what-right h3{
-
-        font-size:2rem;
-    }
-
-    .what-left h2{
-
-        font-size:3.5rem;
-    }
-
-    .carousel{
-
-        gap:.5rem;
-    }
-
-    .carousel button{
-
-        width:48px;
-        height:48px;
-        font-size:1.5rem;
-    }
-
-}
 /* =========================
    SOCIAL BILLBOARD SECTION
 ========================= */
@@ -1071,35 +1017,211 @@ body {
     font-size: 0.9rem;
     color: white;
 }
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
 
-/* ---- Responsive ---- */
+
+/* -------------------------------------
+   LARGE LAPTOP / SMALL DESKTOP
+   <= 1200px
+------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    /* WHAT WE DO */
+
+    .what-we-do-container {
+        grid-template-columns: 280px 1fr;
+        gap: 3rem;
+    }
+
+    .carousel-window {
+        width: min(700px, 70vw);
+    }
+
+    .event-card {
+        flex-basis: 300px;
+    }
+
+
+    /* ABOUT */
+
+    .about img {
+        width: 90%;
+        margin-left: 0;
+    }
+
+
+    /* SOCIAL */
+
+    .social-inner {
+        max-width: 100%;
+    }
+
+}
+
+
+/* -------------------------------------
+   TABLET / SMALL LAPTOP
+   <= 900px
+------------------------------------- */
 
 @media (max-width: 900px) {
+
+    /* GENERAL */
+
+    .hero {
+        padding: 2rem 5%;
+    }
+
+
+    /* HERO */
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 8vw, 5rem);
+        margin-top: 40px;
+    }
+
+    .hero span {
+        font-size: clamp(2.8rem, 9vw, 5rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 60px;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+        padding: 5rem 5%;
+    }
+
+    .about-image {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .about-text {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 auto;
+        max-width: 750px;
+    }
+
+    .about img {
+        width: min(80%, 500px);
+        margin: 0 auto;
+        display: block;
+    }
+
+    .about-text h2 {
+        font-size: clamp(3rem, 8vw, 5rem);
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+
+    .about-text ul {
+        text-align: left;
+        display: inline-block;
+    }
+
+
+    /* FEATURE CARDS */
+
+    .feature-cards {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .feature-card {
+        width: 240px;
+        min-height: 240px;
+    }
+
+
+    /* WHAT WE DO */
+
+    .what-we-do {
+        padding: 5rem 5%;
+    }
+
+    .what-we-do-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .what-left {
+        max-width: 700px;
+    }
+
+    .what-left h2 {
+        font-size: clamp(3.5rem, 9vw, 5rem);
+    }
+
+    .what-right h3 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+
+    .what-right > p {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+
+    /* CAROUSEL */
+
+    .carousel {
+        gap: 0.75rem;
+    }
+
+    .carousel-window {
+        width: min(650px, calc(100vw - 140px));
+    }
+
+    .event-card {
+        flex-basis: 300px;
+    }
+
+    .carousel button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+
+    /* SOCIAL BILLBOARD */
+
     .billboard {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 180px;
     }
-    .tile--wide { grid-column: span 2; }
+
+    .tile--wide {
+        grid-column: span 2;
+    }
+
     .testimonials {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-    .join-wrap .join-btn {
+
+    .join-btn {
         padding: 24px 60px;
         font-size: 1rem;
     }
-}
 
-@media (max-width: 500px) {
-    .billboard {
-        grid-template-columns: 1fr;
-    }
-    .tile--wide { grid-column: span 1; }
-    .social-section {
-        padding: 3rem 5%;
-    }
-}
 
-@media (max-width: 768px) {
+    /* FOOTER */
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -1110,90 +1232,282 @@ body {
     .social-icons {
         justify-content: center;
     }
-
 }
 
 
-
-/* =========================
-   TABLETS
-========================= */
-
-
-@media(max-width:900px){
-
-
-
-    .about {
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-    }
-
-
-    .about-text {
-
-        margin:auto;
-
-    }
-
-
-    .carousel-container {
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .footer-content {
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-
-/* =========================
+/* -------------------------------------
    MOBILE
-========================= */
+   <= 600px
+------------------------------------- */
+
+@media (max-width: 600px) {
+
+    /* GENERAL */
+
+    body {
+        overflow-x: hidden;
+    }
 
 
-@media(max-width:500px){
-
+    /* HERO */
 
     .hero {
+        min-height: 75vh;
+        padding: 1.5rem 5%;
+    }
 
-        min-height:70vh;
+    .hero h1 {
+        font-size: clamp(2.3rem, 11vw, 4rem);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    .hero span {
+        font-size: clamp(2.3rem, 12vw, 4rem);
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+
+    .namaste {
+        width: min(280px, 75vw);
+        top: 38%;
     }
 
 
+    /* ABOUT */
 
-    .flags2,
+    .about {
+        padding: 4rem 6%;
+        gap: 2.5rem;
+    }
+
+    .about-text h2 {
+        font-size: clamp(2.8rem, 12vw, 4rem);
+        margin-bottom: 35px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .about-text li {
+        font-size: 1rem;
+    }
+
+    .about img {
+        width: 100%;
+        max-width: 450px;
+    }
+
+
+    /* FEATURE CARDS */
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .feature-card {
+        width: min(100%, 320px);
+        min-height: 220px;
+    }
+
+
+    /* IMAGE BANNERS */
+
+    .flags,
     .butterflys,
     .semicircles {
-
-        height:120px;
-
+        height: 120px;
     }
 
+
+    /* WHAT WE DO */
+
+    .what-we-do {
+        padding: 4rem 5%;
+    }
+
+    .what-left h2 {
+        font-size: clamp(3rem, 15vw, 4rem);
+    }
+
+    .yellow-line {
+        width: 70px;
+        height: 5px;
+        margin-bottom: 2rem;
+    }
+
+    .stat {
+        padding: 1rem;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .stat h3 {
+        font-size: 1rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+
+
+    /* CAROUSEL */
+
+    .carousel {
+        gap: 0.4rem;
+    }
+
+    .carousel-window {
+        width: calc(100vw - 110px);
+    }
+
+    .carousel-track {
+        gap: 15px;
+    }
+
+    .event-card {
+        flex-basis: 100%;
+        min-height: 400px;
+    }
+
+    .event-card img {
+        height: 180px;
+    }
+
+    .carousel button {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+    }
+
+    .events-button {
+        margin-top: 2.5rem;
+    }
+
+    .events-button a {
+        padding: 0.9rem 2rem;
+    }
+
+
+    /* LOVE SECTION */
+
+    .love-section {
+        justify-content: center;
+        padding: 30px 20px 40px;
+    }
+
+    .love-content {
+        width: min(280px, 75vw);
+        min-height: 150px;
+        padding: 30px 25px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-section {
+        padding: 4rem 5%;
+    }
+
+    .social-heading {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .social-subheading {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .billboard {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+        gap: 12px;
+    }
+
+    .tile--wide {
+        grid-column: span 1;
+    }
+
+    .tile--tall {
+        grid-row: span 1;
+    }
+
+    .join-wrap {
+        margin: 35px 0 45px;
+    }
+
+    .join-btn {
+        width: 100%;
+        padding: 20px 30px;
+        font-size: 0.95rem;
+    }
+
+    .bubble {
+        padding: 18px 20px;
+        font-size: 0.95rem;
+    }
 }
 
-@media (max-width: 900px) {
-    .social-section {
-        grid-template-columns: 1fr;
-        text-align: center;
+
+/* -------------------------------------
+   VERY SMALL PHONES
+   <= 400px
+------------------------------------- */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
     }
 
-    .join-section {
-        justify-content: center;
+    .hero span {
+        font-size: 2.3rem;
     }
 
-    .instagram-section {
-        justify-content: center;
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+
+    .what-left h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .carousel-window {
+        width: calc(100vw - 90px);
+    }
+
+    .carousel button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+
+    .event-card {
+        min-height: 380px;
+    }
+
+
+    .love-content {
+        width: 85vw;
+    }
+
+
+    .join-btn {
+        padding: 18px 20px;
     }
 }

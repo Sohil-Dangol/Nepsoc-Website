@@ -1135,22 +1135,207 @@ img{
 
 }
 
-/* Mobile */
+/* ===========================
+   RESPONSIVE
+=========================== */
 
-@media (max-width: 768px) {
 
-    .events-preview {
-        padding: 70px 6%;
+/* ===========================
+   TABLETS / SMALL LAPTOPS
+=========================== */
+
+@media (max-width: 1100px) {
+
+    /* HERO */
+
+    .events-hero {
+        height: auto;
+        min-height: 750px;
+        padding: 60px 0;
     }
 
-    .events-preview-header {
+    .events-hero-content {
+        width: 90%;
+        gap: 40px;
+    }
+
+    .events-hero-text {
+        width: 50%;
+    }
+
+    .events-hero-text h1 {
+        font-size: clamp(4rem, 8vw, 7rem);
+    }
+
+    .events-hero-text p {
+        font-size: 1rem;
+    }
+
+    .events-hero-images {
+        width: 50%;
+        height: 320px;
+    }
+
+    .main-image {
+        width: 65%;
+        height: 250px;
+    }
+
+    .image-top,
+    .image-bottom {
+        width: 40%;
+        height: 170px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    .section {
+        width: 90%;
+        margin: 250px auto;
+    }
+
+    .events-preview {
+        width: 90%;
+        margin: 250px auto;
+    }
+
+
+    /* PREVIEW */
+
+    .events-preview-grid {
+        gap: 20px;
+    }
+
+    .preview-image,
+    .preview-image.large {
+        height: 50vh;
+    }
+
+
+    /* CAROUSEL */
+
+    .event-card {
+        flex: 0 0 290px;
+    }
+
+    .event-card img {
+        height: 190px;
+    }
+
+
+    /* EXPANDED GRID */
+
+    .carousel.expanded .carousel-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SCHEDULE */
+
+    .schedule {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .calendar {
+        height: 550px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter {
+        padding: 50px 7%;
+    }
+
+    .newsletter input {
+        width: 260px;
+    }
+
+
+    /* HEADINGS */
+
+    .heading-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .heading-content p {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ===========================
+   TABLETS
+=========================== */
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .events-hero {
+        margin-top: 0;
+        min-height: auto;
+        padding: 60px 0 80px;
+    }
+
+    .events-hero-content {
         flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .events-hero-text {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .events-hero-text h1 {
+        font-size: clamp(4rem, 12vw, 7rem);
+    }
+
+    .events-hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .events-hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .events-hero-buttons {
+        justify-content: center;
+    }
+
+    .events-hero-images {
+        width: min(700px, 90%);
+        height: 350px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        width: 90%;
+        margin: 180px auto;
+    }
+
+    .events-preview {
+        width: 90%;
+        margin: 180px auto;
+    }
+
+
+    /* PREVIEW */
+
+    .events-preview-header {
         align-items: flex-start;
-        gap: 25px;
+        gap: 20px;
     }
 
     .events-preview-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .preview-image,
@@ -1158,20 +1343,472 @@ img{
         height: 350px;
     }
 
-}
 
-@media (max-width: 900px) {
+    /* CAROUSEL */
 
-    .carousel.expanded .carousel-track {
-        grid-template-columns: repeat(2, 1fr);
+    .carousel-track {
+        gap: 20px;
     }
 
+    .event-card {
+        flex: 0 0 280px;
+    }
+
+
+    /* SCHEDULE */
+
+    .schedule-card {
+        flex-wrap: wrap;
+    }
+
+    .schedule-image {
+        width: 140px;
+        height: 90px;
+    }
+
+    .join-btn {
+        margin-left: auto;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 8%;
+    }
+
+    .newsletter form {
+        width: 100%;
+    }
+
+    .newsletter input {
+        flex: 1;
+        min-width: 200px;
+        width: auto;
+    }
+
+
+    /* HEADING */
+
+    .heading-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .heading-content p {
+        font-size: 1rem;
+    }
 }
+
+
+/* ===========================
+   MOBILE
+=========================== */
 
 @media (max-width: 600px) {
 
+    /* HERO */
+
+    .events-hero {
+        padding: 45px 0 60px;
+    }
+
+    .events-hero-content {
+        width: 92%;
+        gap: 45px;
+    }
+
+    .events-tag {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .events-hero-text h1 {
+        font-size: clamp(3.5rem, 17vw, 5.5rem);
+        line-height: 0.9;
+    }
+
+    .events-hero-text h2 {
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+    }
+
+    .events-hero-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .events-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+
+    /* IMAGE COLLAGE */
+
+    .events-hero-images {
+        width: 100%;
+        height: 280px;
+    }
+
+    .main-image {
+        width: 65%;
+        height: 210px;
+        top: 35px;
+    }
+
+    .image-top,
+    .image-bottom {
+        width: 40%;
+        height: 145px;
+    }
+
+    .image-top {
+        top: -20px;
+    }
+
+    .image-bottom {
+        bottom: -10px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        width: 92%;
+        margin: 100px auto;
+    }
+
+    .events-preview {
+        width: 92%;
+        margin: 100px auto;
+    }
+
+
+    /* SECTION HEADER */
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+
+    /* PREVIEW */
+
+    .events-preview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .events-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .preview-image,
+    .preview-image.large {
+        height: 300px;
+        border-radius: 16px;
+    }
+
+    .gallery-link {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+
+    /* CAROUSEL */
+
+    .carousel {
+        margin-top: 25px;
+    }
+
+    .carousel-controls {
+        gap: 8px;
+    }
+
+    .carousel-controls button {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .carousel-track {
+        gap: 15px;
+    }
+
+    .event-card {
+        flex: 0 0 85vw;
+        border-radius: 18px;
+    }
+
+    .event-card img {
+        height: 190px;
+    }
+
+    .event-info {
+        padding: 18px;
+    }
+
+    .event-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .event-meta p {
+        font-size: 0.85rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+
+    /* EXPANDED EVENTS */
+
     .carousel.expanded .carousel-track {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .carousel.expanded .event-card img {
+        height: 250px;
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .categories button {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+
+    /* SCHEDULE */
+
+    .schedule {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .schedule-list {
+        gap: 15px;
+    }
+
+    .schedule-card {
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .date-box {
+        width: 55px;
+        height: 65px;
+    }
+
+    .day {
+        font-size: 24px;
+    }
+
+    .schedule-image {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 180px;
+    }
+
+    .schedule-content {
+        grid-column: 1 / -1;
+    }
+
+    .schedule-content h3 {
+        font-size: 18px;
+    }
+
+    .schedule-time {
+        font-size: 0.9rem;
+    }
+
+    .schedule-location {
+        font-size: 0.8rem;
+    }
+
+    .join-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 0;
+    }
+
+
+    /* CALENDAR */
+
+    .calendar {
+        height: 500px;
+        border-radius: 14px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter {
+        padding: 45px 7%;
+        gap: 25px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+
+    .newsletter input {
+        min-width: 0;
+    }
+
+
+    /* SECTION HEADING */
+
+    .section-heading {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .heading-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .heading-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .heading-line {
+        width: 55px;
+        height: 3px;
+    }
+
+    .heading-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 400px) {
+
+    .events-hero {
+        padding: 35px 0 50px;
+    }
+
+    .events-hero-content {
+        width: 94%;
+        gap: 35px;
+    }
+
+    .events-hero-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .events-hero-text h2 {
+        font-size: 1.05rem;
+    }
+
+    .events-hero-text p {
+        font-size: 0.85rem;
+    }
+
+    .hero-btn {
+        max-width: 250px;
+    }
+
+
+    /* COLLAGE */
+
+    .events-hero-images {
+        height: 240px;
+    }
+
+    .main-image {
+        height: 180px;
+    }
+
+    .image-top,
+    .image-bottom {
+        height: 120px;
+    }
+
+
+    /* SECTIONS */
+
+    .section,
+    .events-preview {
+        width: 94%;
+        margin: 70px auto;
+    }
+
+
+    /* CAROUSEL */
+
+    .event-card {
+        flex: 0 0 88vw;
+    }
+
+    .event-card img {
+        height: 170px;
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
         grid-template-columns: 1fr;
     }
 
+
+    /* CALENDAR */
+
+    .calendar {
+        height: 450px;
+    }
+
+
+    /* HEADINGS */
+
+    .heading-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .heading-content p {
+        font-size: 0.85rem;
+    }
 }

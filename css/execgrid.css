@@ -1,0 +1,293 @@
+/* ===========================
+   SCROLL REVEAL
+=========================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ff8b87;
+    color: #111;
+}
+
+/* Main section */
+.exec-section {
+    padding: 0px 20px;
+    margin-bottom: 30px;
+}
+
+.exec-section h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 100px;
+}
+.placeholder {
+  background: #B8CCE8; /* muted tint of your #4688ff */
+  border-radius: 10px;
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
+
+/* Grid */
+.exec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Cards */
+.card-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* The blue card peeking out behind */
+.card-bg {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 100%;
+    height: 100%;
+    background: #4688ff;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.card {
+    position: relative; /* sits on top of card-bg */
+    z-index: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Tape strip */
+.tape {
+    width: 60px;
+    height: 24px;
+    background: #e6dcc8;
+    opacity: 0.85;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+/* Photo placeholder square (matches your mockup) */
+
+/* Once you have real photos, swap .placeholder for an <img> and use: */
+.photo-frame img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 20px 0 5px;
+}
+
+.role {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+
+/* ===========================
+   TABLETS / SMALL LAPTOPS
+=========================== */
+
+@media (max-width: 1000px) {
+
+    .exec-section {
+        padding: 0 5%;
+        margin-bottom: 40px;
+    }
+
+    .exec-section h1 {
+        font-size: clamp(4rem, 9vw, 6rem);
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 70px;
+    }
+
+    .exec-grid {
+        width: 100%;
+        max-width: 850px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .photo-frame img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .role {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 600px) {
+
+    .exec-section {
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .exec-section h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+        line-height: 0.95;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+
+    .exec-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-wrapper {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .card-bg {
+        top: 9px;
+        left: 9px;
+        border-radius: 18px;
+    }
+
+    .photo-frame img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .name {
+        font-size: 1.2rem;
+        margin-top: 16px;
+    }
+
+    .role {
+        font-size: 0.9rem;
+    }
+
+    /* Disable large hover movement on touch devices */
+    .card:hover {
+        transform: none;
+    }
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 400px) {
+
+    .exec-section {
+        padding: 0 15px;
+    }
+
+    .exec-section h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .exec-grid {
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .photo-frame img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+
+    .role {
+        font-size: 0.85rem;
+    }
+
+    .tape {
+        width: 50px;
+        height: 20px;
+        top: -10px;
+    }
+
+}
