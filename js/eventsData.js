@@ -6,7 +6,7 @@ const pastEvents = [
     time: "2:00 – 4:00 PM",
     location: "Sports Hub",
     description: "",
-    image: "/event_posters/past/charity.png"
+    image: "../images/event_posters/past/charity.png"
 },
 
 {
@@ -15,7 +15,7 @@ const pastEvents = [
     time: "5:00 – 7:00 PM",
     location: "Momo Lisa Cafe",
     description: "",
-    image: "/event_posters/past/games-cafe.png"
+    image: "../images/event_posters/past/games-cafe.png"
 },
 
 {
@@ -24,7 +24,7 @@ const pastEvents = [
     time: "7:00 – 9:00 PM",
     location: "OC1.03",
     description: "",
-    image: "/event_posters/past/elections.png"
+    image: "../images/event_posters/past/elections.png"
 },
 
 {
@@ -33,7 +33,7 @@ const pastEvents = [
     time: "7:00 PM –",
     location: "Leamington",
     description: "",
-    image: "/event_posters/past/crawl.png"
+    image: "../images/event_posters/past/crawl.png"
 },
 
 {
@@ -42,7 +42,7 @@ const pastEvents = [
     time: "11:30 – 11:40 AM",
     location: "JX0.10",
     description: "",
-    image: "/event_posters/past/photos.png"
+    image: "../images/event_posters/past/photos.png"
 },
 
 {
@@ -51,7 +51,7 @@ const pastEvents = [
     time: "6:30 PM –",
     location: "Birmingham Ice Rink",
     description: "",
-    image: "/event_posters/past/skating.png"
+    image: "../images/event_posters/past/skating.png"
 },
 
 {
@@ -60,7 +60,7 @@ const pastEvents = [
     time: "7:00 PM –",
     location: "Cryfield Pitches",
     description: "",
-    image: "/event_posters/past/abacus_vs_nepsoc.png"
+    image: "../images/event_posters/past/abacus_vs_nepsoc.png"
 },
 
 {
@@ -69,7 +69,7 @@ const pastEvents = [
     time: "6:00 PM –",
     location: "FAB0.03",
     description: "",
-    image: "/event_posters/past/cr.png"
+    image: "../images/event_posters/past/cr.png"
 },
 
 {
@@ -78,7 +78,7 @@ const pastEvents = [
     time: "7:30 PM –",
     location: "Assembly",
     description: "",
-    image: "/event_posters/past/circle.png"
+    image: "../images/event_posters/past/circle.png"
 },
 
 {
@@ -87,7 +87,7 @@ const pastEvents = [
     time: "7:00 PM –",
     location: "Leamington",
     description: "",
-    image: "/event_posters/past/momo.png"
+    image: "../images/event_posters/past/momo.png"
 },
 
 {
@@ -96,7 +96,7 @@ const pastEvents = [
     time: "",
     location: "Sports Hub",
     description: "",
-    image: "/event_posters/past/wc.png"
+    image: "../images/event_posters/past/wc.png"
 },
 
 {
@@ -105,7 +105,7 @@ const pastEvents = [
     time: "7:00 PM – 12:00 AM",
     location: "Rosebud Cafe",
     description: "",
-    image: "/event_posters/past/tihar.png"
+    image: "../images/event_posters/past/tihar.png"
 },
 
 {
@@ -114,7 +114,7 @@ const pastEvents = [
     time: "5:00 PM",
     location: "FAB0.08",
     description: "",
-    image: "/event_posters/past/movie.png"
+    image: "../images/event_posters/past/movie.png"
 },
 
 {
@@ -123,7 +123,7 @@ const pastEvents = [
     time: "6:00 – 10:00 PM",
     location: "University of Leicester",
     description: "",
-    image: "/event_posters/past/ball.png"
+    image: "../images/event_posters/past/ball.png"
 },
 
 {
@@ -132,7 +132,7 @@ const pastEvents = [
     time: "7:00 PM –",
     location: "Leamington",
     description: "",
-    image: "/event_posters/past/crawl_25.png"
+    image: "../images/event_posters/past/crawl_25.png"
 },
 
 {
@@ -141,7 +141,7 @@ const pastEvents = [
     time: "2:00 – 4:00 PM",
     location: "H0.03",
     description: "",
-    image: "/event_posters/past/games-night.jpg"
+    image: "../images/event_posters/past/games-night.jpg"
 }
 
 
