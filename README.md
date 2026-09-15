@@ -2,7 +2,7 @@
 
 The official website for the **University of Warwick Nepalese Society (NepSoc)** — a central hub for society information, events, culture, social media, and membership.
 
-🔗 **Live Website:** [Warwick NepSoc]([https://warwicknepsoc.co.uk/](https://sohil-dangol.github.io/Nepsoc-Website/index.html))
+🔗 **Live Website:** [Warwick NepSoc](https://sohil-dangol.github.io/Nepsoc-Website/index.html)
 🔗 **GitHub Repository:** [Sohil-Dangol/Nepsoc-Website](https://github.com/Sohil-Dangol/Nepsoc-Website)
 
 ---
