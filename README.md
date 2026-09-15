@@ -100,28 +100,58 @@ The project uses a lightweight front-end architecture without a large JavaScript
 
 ```text
 Nepsoc-Website/
-│
 ├── css/
+│   ├── elements.css
+│   ├── events.css
+│   ├── execgrid.css
+│   ├── footer.css
+│   ├── gallery.css
 │   ├── homepage.css
 │   ├── navbar.css
-│   └── footer.css
+│   ├── shop.css
+│   └── sports.css
 │
 ├── html/
-│   └── ...
+│   ├── events.html
+│   ├── exec.html
+│   ├── footer.html
+│   ├── gallery.html
+│   ├── navbar.html
+│   ├── shop.html
+│   └── sports.html
 │
 ├── images/
 │   ├── display/
-│   └── icons/
+│   ├── events_page/
+│   ├── event_posters/
+│   │   └── past/
+│   ├── gallery/
+│   │   ├── 2324/
+│   │   ├── 2425/
+│   │   ├── 2526/
+│   │   ├── 2627/
+│   │   ├── ball/
+│   │   ├── cake decorating/
+│   │   ├── crawl 2025 jan/
+│   │   ├── Freshers Fair/
+│   │   ├── Momo Night/
+│   │   ├── movie night/
+│   │   ├── nepsoc vs abacus/
+│   │   └── shrinky dinks/
+│   ├── icons/
+│   └── sports/
 │
 ├── js/
+│   ├── carousel.js
 │   ├── eventsData.js
+│   ├── gallery.js
+│   ├── galleryReveal.js
 │   ├── heart.js
 │   ├── loadComponents.js
 │   ├── scrollReveal.js
 │   └── simpleCarousel.js
 │
-├── index.html
-└── README.md
+└──index.html
 ```
 
 ---
